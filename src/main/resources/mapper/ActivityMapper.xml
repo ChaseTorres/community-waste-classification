@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.community.waste.mapper.ActivityMapper">
+    
+    <!-- 活动表字段 -->
+    <sql id="Base_Column_List">
+        id, title, content, location, start_time, end_time, registration_method, publisher_id, publish_time, update_time
+    </sql>
+    
+    <!-- 用户表字段 -->
+    <sql id="User_Column_List">
+        u.id AS publisher_id, u.username AS publisher_username
+    </sql>
+    
+    <!-- 活动结果映射 -->
+    <resultMap id="ActivityResultMap" type="com.community.waste.entity.Activity">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="location" property="location" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="registration_method" property="registrationMethod" />
+        <result column="publisher_id" property="publisherId" />
+        <result column="publish_time" property="publishTime" />
+        <result column="update_time" property="updateTime" />
+        <!-- 发布者信息（关联查询） -->
+        <association property="publisher" javaType="com.community.waste.entity.User">
+            <id column="publisher_id" property="id" />
+            <result column="publisher_username" property="username" />
+        </association>
+    </resultMap>
+    
+    <!-- 根据ID查询活动 -->
+    <select id="selectById" parameterType="java.lang.Integer" resultMap="ActivityResultMap">
+        SELECT 
+            a.<include refid="Base_Column_List" />,
+            <include refid="User_Column_List" />
+        FROM 
+            activity a
+        LEFT JOIN 
+            user u ON a.publisher_id = u.id
+        WHERE 
+            a.id = #{id}
+    </select>
+    
+    <!-- 查询所有活动 -->
+    <select id="selectAll" resultMap="ActivityResultMap">
+        SELECT 
+            a.<include refid="Base_Column_List" />,
+            <include refid="User_Column_List" />
+        FROM 
+            activity a
+        LEFT JOIN 
+            user u ON a.publisher_id = u.id
+        ORDER BY 
+            a.start_time ASC
+    </select>
+    
+    <!-- 查询未过期活动 -->
+    <select id="selectNotExpired" parameterType="java.util.Date" resultMap="ActivityResultMap">
+        SELECT 
+            a.<include refid="Base_Column_List" />,
+            <include refid="User_Column_List" />
+        FROM 
+            activity a
+        LEFT JOIN 
+            user u ON a.publisher_id = u.id
+        WHERE 
+            a.end_time >= #{currentTime}
+        ORDER BY 
+            a.start_time ASC
+    </select>
+    
+    <!-- 按时间排序查询活动列表 -->
+    <select id="selectByTimeOrder" resultMap="ActivityResultMap">
+        SELECT 
+            a.<include refid="Base_Column_List" />,
+            <include refid="User_Column_List" />
+        FROM 
+            activity a
+        LEFT JOIN 
+            user u ON a.publisher_id = u.id
+        <where>
+            <if test="expired != null">
+                <if test="expired">
+                    AND a.end_time &lt; NOW()
+                </if>
+                <if test="!expired">
+                    AND a.end_time >= NOW()
+                </if>
+            </if>
+        </where>
+        ORDER BY 
+            a.start_time ASC
+    </select>
+    
+    <!-- 新增活动 -->
+    <insert id="insert" parameterType="com.community.waste.entity.Activity" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO activity (
+            title, content, location, start_time, end_time, registration_method, publisher_id, publish_time
+        ) VALUES (
+            #{title}, #{content}, #{location}, #{startTime}, #{endTime}, #{registrationMethod}, #{publisherId}, #{publishTime}
+        )
+    </insert>
+    
+    <!-- 更新活动 -->
+    <update id="update" parameterType="com.community.waste.entity.Activity">
+        UPDATE activity
+        <set>
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+            <if test="content != null and content != ''">
+                content = #{content},
+            </if>
+            <if test="location != null">
+                location = #{location},
+            </if>
+            <if test="startTime != null">
+                start_time = #{startTime},
+            </if>
+            <if test="endTime != null">
+                end_time = #{endTime},
+            </if>
+            <if test="registrationMethod != null">
+                registration_method = #{registrationMethod},
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+    
+    <!-- 删除活动 -->
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        DELETE FROM activity WHERE id = #{id}
+    </delete>
+</mapper> 
+ 

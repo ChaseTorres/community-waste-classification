@@ -1,0 +1,66 @@
+2025-04-21 20:18:40.706 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/AnnouncementMapper.class]
+2025-04-21 20:18:40.707 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/WasteRecordMapper.class]
+2025-04-21 20:18:40.707 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/UserMapper.class]
+2025-04-21 20:18:40.707 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/FaqMapper.class]
+2025-04-21 20:18:40.707 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/WasteCategoryMapper.class]
+2025-04-21 20:18:40.707 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/ActivityMapper.class]
+2025-04-21 20:18:40.708 DEBUG - Creating MapperFactoryBean with name 'announcementMapper' and 'com.community.waste.mapper.AnnouncementMapper' mapperInterface
+2025-04-21 20:18:40.709 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'announcementMapper'.
+2025-04-21 20:18:40.709 DEBUG - Creating MapperFactoryBean with name 'wasteRecordMapper' and 'com.community.waste.mapper.WasteRecordMapper' mapperInterface
+2025-04-21 20:18:40.709 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'wasteRecordMapper'.
+2025-04-21 20:18:40.709 DEBUG - Creating MapperFactoryBean with name 'userMapper' and 'com.community.waste.mapper.UserMapper' mapperInterface
+2025-04-21 20:18:40.709 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2025-04-21 20:18:40.709 DEBUG - Creating MapperFactoryBean with name 'faqMapper' and 'com.community.waste.mapper.FaqMapper' mapperInterface
+2025-04-21 20:18:40.709 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'faqMapper'.
+2025-04-21 20:18:40.709 DEBUG - Creating MapperFactoryBean with name 'wasteCategoryMapper' and 'com.community.waste.mapper.WasteCategoryMapper' mapperInterface
+2025-04-21 20:18:40.709 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'wasteCategoryMapper'.
+2025-04-21 20:18:40.709 DEBUG - Creating MapperFactoryBean with name 'activityMapper' and 'com.community.waste.mapper.ActivityMapper' mapperInterface
+2025-04-21 20:18:40.709 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'activityMapper'.
+2025-04-21 20:19:34.171 INFO  - 执行SQL: SELECT id, username, password, phone, email, role, register_time, last_login_time FROM user WHERE username = 'admin'
+2025-04-21 20:19:34.171 INFO  - SQL ID: com.community.waste.mapper.UserMapper.selectByUsername
+2025-04-21 20:19:34.171 INFO  - 执行耗时: 36 毫秒
+2025-04-21 20:19:34.181 INFO  - 执行SQL: UPDATE user SET last_login_time = NOW() WHERE id = 1
+2025-04-21 20:19:34.181 INFO  - SQL ID: com.community.waste.mapper.UserMapper.updateLastLoginTime
+2025-04-21 20:19:34.181 INFO  - 执行耗时: 9 毫秒
+2025-04-21 20:19:59.537 INFO  - 执行SQL: SELECT id, name, description, examples, image1, image2, image3, create_time, update_time FROM waste_category ORDER BY id ASC
+2025-04-21 20:19:59.538 INFO  - SQL ID: com.community.waste.mapper.WasteCategoryMapper.selectAll
+2025-04-21 20:19:59.538 INFO  - 执行耗时: 13 毫秒
+2025-04-21 20:20:14.230 INFO  - 执行SQL: SELECT id, name, description, examples, image1, image2, image3, create_time, update_time FROM waste_category ORDER BY id ASC
+2025-04-21 20:20:14.231 INFO  - SQL ID: com.community.waste.mapper.WasteCategoryMapper.selectAll
+2025-04-21 20:20:14.231 INFO  - 执行耗时: 9 毫秒
+2025-04-21 20:20:14.246 INFO  - 执行SQL: SELECT r.id, r.user_id, r.category_id, r.weight, r.description, r.location, r.image, r.create_time, u.id as u_id, u.username as u_username, u.role as u_role, c.id as c_id, c.name as c_name FROM waste_record r LEFT JOIN user u ON r.user_id = u.id LEFT JOIN waste_category c ON r.category_id = c.id WHERE r.user_id = 1 ORDER BY r.create_time DESC
+2025-04-21 20:20:14.246 INFO  - SQL ID: com.community.waste.mapper.WasteRecordMapper.selectByUserId
+2025-04-21 20:20:14.246 INFO  - 执行耗时: 21 毫秒
+2025-04-21 20:20:14.252 INFO  - 执行SQL: SELECT IFNULL(SUM(weight), 0) FROM waste_record WHERE user_id = 1
+2025-04-21 20:20:14.252 INFO  - SQL ID: com.community.waste.mapper.WasteRecordMapper.sumWeightByUserId
+2025-04-21 20:20:14.252 INFO  - 执行耗时: 27 毫秒
+2025-04-21 20:20:29.739 INFO  - 执行SQL: SELECT r.id, r.user_id, r.category_id, r.weight, r.description, r.location, r.image, r.create_time, u.id as u_id, u.username as u_username, u.role as u_role, c.id as c_id, c.name as c_name FROM waste_record r LEFT JOIN user u ON r.user_id = u.id LEFT JOIN waste_category c ON r.category_id = c.id WHERE r.user_id = 1 ORDER BY r.create_time DESC
+2025-04-21 20:20:29.739 INFO  - 执行SQL: SELECT IFNULL(SUM(weight), 0) FROM waste_record WHERE user_id = 1
+2025-04-21 20:20:29.739 INFO  - SQL ID: com.community.waste.mapper.WasteRecordMapper.sumWeightByUserId
+2025-04-21 20:20:29.739 INFO  - SQL ID: com.community.waste.mapper.WasteRecordMapper.selectByUserId
+2025-04-21 20:20:29.740 INFO  - 执行耗时: 4 毫秒
+2025-04-21 20:20:29.740 INFO  - 执行耗时: 4 毫秒
+2025-04-21 20:20:29.745 INFO  - 执行SQL: SELECT id, name, description, examples, image1, image2, image3, create_time, update_time FROM waste_category ORDER BY id ASC
+2025-04-21 20:20:29.745 INFO  - SQL ID: com.community.waste.mapper.WasteCategoryMapper.selectAll
+2025-04-21 20:20:29.745 INFO  - 执行耗时: 10 毫秒
+2025-04-21 20:20:36.831 INFO  - 执行SQL: SELECT c.id as categoryId, c.name as categoryName, COUNT(r.id) as recordCount, IFNULL(SUM(r.weight), 0) as totalWeight FROM waste_record r LEFT JOIN waste_category c ON r.category_id = c.id GROUP BY c.id, c.name
+2025-04-21 20:20:36.831 INFO  - 执行SQL: SELECT r.id, r.user_id, r.category_id, r.weight, r.description, r.location, r.image, r.create_time, u.id as u_id, u.username as u_username, u.role as u_role, c.id as c_id, c.name as c_name FROM waste_record r LEFT JOIN user u ON r.user_id = u.id LEFT JOIN waste_category c ON r.category_id = c.id ORDER BY r.create_time DESC
+2025-04-21 20:20:36.831 INFO  - SQL ID: com.community.waste.mapper.WasteRecordMapper.selectAll
+2025-04-21 20:20:36.831 INFO  - 执行耗时: 2 毫秒
+2025-04-21 20:20:36.831 INFO  - SQL ID: com.community.waste.mapper.WasteRecordMapper.countGroupByCategory
+2025-04-21 20:20:36.832 INFO  - 执行耗时: 2 毫秒
+2025-04-21 20:20:36.834 INFO  - 执行SQL: SELECT DATE_FORMAT(r.create_time, '%Y-%m-%d') as date, COUNT(r.id) as recordCount, IFNULL(SUM(r.weight), 0) as totalWeight FROM waste_record r WHERE r.create_time >= DATE_SUB(CURDATE(), INTERVAL 30 DAY) GROUP BY DATE_FORMAT(r.create_time, '%Y-%m-%d') ORDER BY date
+2025-04-21 20:20:36.834 INFO  - SQL ID: com.community.waste.mapper.WasteRecordMapper.countGroupByDate
+2025-04-21 20:20:36.834 INFO  - 执行耗时: 3 毫秒
+2025-04-21 20:20:44.692 INFO  - 执行SQL: SELECT a. id, title, content, location, start_time, end_time, registration_method, publisher_id, publish_time, update_time , u.id AS publisher_id, u.username AS publisher_username FROM activity a LEFT JOIN user u ON a.publisher_id = u.id WHERE a.end_time >= NOW() ORDER BY a.start_time ASC
+2025-04-21 20:20:44.693 INFO  - SQL ID: com.community.waste.mapper.ActivityMapper.selectByTimeOrder
+2025-04-21 20:20:44.693 INFO  - 执行耗时: 17 毫秒
+2025-04-21 20:20:45.423 INFO  - 执行SQL: SELECT a. id, title, content, location, start_time, end_time, registration_method, publisher_id, publish_time, update_time , u.id AS publisher_id, u.username AS publisher_username FROM activity a LEFT JOIN user u ON a.publisher_id = u.id WHERE a.end_time < NOW() ORDER BY a.start_time ASC
+2025-04-21 20:20:45.423 INFO  - SQL ID: com.community.waste.mapper.ActivityMapper.selectByTimeOrder
+2025-04-21 20:20:45.423 INFO  - 执行耗时: 7 毫秒
+2025-04-21 20:20:47.294 INFO  - 执行SQL: SELECT a. id, title, content, location, start_time, end_time, registration_method, publisher_id, publish_time, update_time , u.id AS publisher_id, u.username AS publisher_username FROM activity a LEFT JOIN user u ON a.publisher_id = u.id WHERE a.id = 1
+2025-04-21 20:20:47.294 INFO  - SQL ID: com.community.waste.mapper.ActivityMapper.selectById
+2025-04-21 20:20:47.294 INFO  - 执行耗时: 6 毫秒
+2025-04-21 20:21:04.428 INFO  - 执行SQL: SELECT a. id, title, content, location, start_time, end_time, registration_method, publisher_id, publish_time, update_time , u.id AS publisher_id, u.username AS publisher_username FROM activity a LEFT JOIN user u ON a.publisher_id = u.id WHERE a.end_time >= NOW() ORDER BY a.start_time ASC
+2025-04-21 20:21:04.429 INFO  - SQL ID: com.community.waste.mapper.ActivityMapper.selectByTimeOrder
+2025-04-21 20:21:04.429 INFO  - 执行耗时: 3 毫秒

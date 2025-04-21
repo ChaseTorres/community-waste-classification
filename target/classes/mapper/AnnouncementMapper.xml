@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.community.waste.mapper.AnnouncementMapper">
+    
+    <resultMap id="AnnouncementMap" type="com.community.waste.entity.Announcement">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="publisherId" column="publisher_id"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+    
+    <sql id="Base_Column_List">
+        id, title, content, publisher_id, publish_time, update_time
+    </sql>
+    
+    <select id="selectAll" resultMap="AnnouncementMap">
+        SELECT 
+        <include refid="Base_Column_List"/>
+        FROM announcement
+        ORDER BY publish_time DESC
+    </select>
+    
+    <select id="selectById" resultMap="AnnouncementMap">
+        SELECT 
+        <include refid="Base_Column_List"/>
+        FROM announcement
+        WHERE id = #{id}
+    </select>
+    
+    <select id="selectLatest" resultMap="AnnouncementMap">
+        SELECT 
+        <include refid="Base_Column_List"/>
+        FROM announcement
+        ORDER BY publish_time DESC
+        LIMIT #{limit}
+    </select>
+    
+    <insert id="insert" parameterType="com.community.waste.entity.Announcement" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO announcement (
+            title, content, publisher_id, publish_time, update_time
+        ) VALUES (
+            #{title}, #{content}, #{publisherId}, 
+            #{publishTime}, #{updateTime}
+        )
+    </insert>
+    
+    <update id="update" parameterType="com.community.waste.entity.Announcement">
+        UPDATE announcement
+        <set>
+            <if test="title != null">title = #{title},</if>
+            <if test="content != null">content = #{content},</if>
+            <if test="publisherId != null">publisher_id = #{publisherId},</if>
+            <if test="publishTime != null">publish_time = #{publishTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+    
+    <delete id="deleteById">
+        DELETE FROM announcement
+        WHERE id = #{id}
+    </delete>
+    
+</mapper> 

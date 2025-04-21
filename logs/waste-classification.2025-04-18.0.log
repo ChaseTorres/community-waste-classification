@@ -1,0 +1,67 @@
+2025-04-18 18:26:41.496 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 12815 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-18 18:26:41.499 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-18 18:26:41.500 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-18 18:26:41.951 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-18 18:26:41.956 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-18 18:26:41.956 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-18 18:26:42.060 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-18 18:26:42.148 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-18 18:26:42.148 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 625 ms
+2025-04-18 18:26:42.378 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-18 18:26:42.379 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:26:42.388 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-18 18:26:42.388 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:26:42.388 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-18 18:26:42.388 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:26:42.639 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/waste'
+2025-04-18 18:26:42.643 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-18 18:26:42.643 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:26:42.644 [main] INFO  com.community.waste.WasteClassificationApplication - Started WasteClassificationApplication in 1.371 seconds (JVM running for 1.623)
+2025-04-18 18:26:42.662 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-18 18:26:42.662 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-18 18:26:42.662 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:27:40.494 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-18 18:27:40.494 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-18 18:27:40.496 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-18 18:36:42.655 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-18 18:36:42.656 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:36:42.679 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-18 18:41:46.358 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 13358 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-18 18:41:46.359 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-18 18:41:46.359 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-18 18:41:46.774 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-18 18:41:46.780 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-18 18:41:46.780 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-18 18:41:46.886 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-18 18:41:46.976 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-18 18:41:46.976 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 598 ms
+2025-04-18 18:41:47.115 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-18 18:41:47.117 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:41:47.124 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-18 18:41:47.124 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:41:47.124 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-18 18:41:47.124 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:41:47.291 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-18 18:41:47.349 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/waste'
+2025-04-18 18:41:47.352 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-18 18:41:47.352 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:41:47.353 [main] INFO  com.community.waste.WasteClassificationApplication - Started WasteClassificationApplication in 1.185 seconds (JVM running for 1.36)
+2025-04-18 18:41:47.366 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-18 18:41:47.367 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-18 18:41:47.367 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:42:06.975 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-18 18:42:06.976 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-18 18:42:06.977 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-18 18:42:32.034 [http-nio-8080-exec-4] INFO  com.community.waste.service.impl.UserServiceImpl - 开始用户名登录流程，用户名: admin
+2025-04-18 18:42:32.035 [http-nio-8080-exec-4] DEBUG com.community.waste.service.impl.UserServiceImpl - 根据用户名查询用户: admin
+2025-04-18 18:42:32.047 [http-nio-8080-exec-4] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:42:32.082 [http-nio-8080-exec-4] DEBUG com.community.waste.service.impl.UserServiceImpl - 校验密码
+2025-04-18 18:42:32.082 [http-nio-8080-exec-4] INFO  com.community.waste.service.impl.UserServiceImpl - 更新用户最后登录时间，用户ID: 1
+2025-04-18 18:42:32.083 [http-nio-8080-exec-4] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:42:32.091 [http-nio-8080-exec-4] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-18 18:42:32.091 [http-nio-8080-exec-4] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:42:32.091 [http-nio-8080-exec-4] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-18 18:42:32.092 [http-nio-8080-exec-4] INFO  com.community.waste.service.impl.UserServiceImpl - 用户登录成功，用户ID: 1
+2025-04-18 18:42:42.564 [http-nio-8080-exec-7] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:42:43.529 [http-nio-8080-exec-8] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-18 18:42:45.245 [http-nio-8080-exec-9] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource

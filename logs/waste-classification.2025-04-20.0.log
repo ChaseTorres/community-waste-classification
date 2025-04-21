@@ -1,0 +1,515 @@
+2025-04-20 15:58:24.111 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 17605 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-20 15:58:24.113 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-20 15:58:24.114 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-20 15:58:24.550 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-20 15:58:24.555 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-20 15:58:24.555 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-20 15:58:24.660 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-20 15:58:24.748 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-20 15:58:24.749 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 614 ms
+2025-04-20 15:58:24.914 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-20 15:58:24.915 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 15:58:24.922 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-20 15:58:24.922 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 15:58:24.923 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-20 15:58:24.923 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 15:58:25.156 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-20 15:58:25.215 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/waste'
+2025-04-20 15:58:25.219 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-20 15:58:25.219 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 15:58:25.220 [main] INFO  com.community.waste.WasteClassificationApplication - Started WasteClassificationApplication in 1.316 seconds (JVM running for 1.542)
+2025-04-20 15:58:25.237 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-20 15:58:25.238 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-20 15:58:25.238 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 15:58:42.443 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-20 15:58:42.443 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-20 15:58:42.444 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-20 16:08:25.196 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-20 16:08:25.196 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:08:25.204 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-20 16:18:25.168 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-20 16:18:25.168 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:18:25.176 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-20 16:28:25.135 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-20 16:28:25.135 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:28:25.139 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-20 16:46:13.513 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 18822 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-20 16:46:13.514 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-20 16:46:13.514 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-20 16:46:14.002 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-20 16:46:14.008 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-20 16:46:14.008 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-20 16:46:14.176 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-20 16:46:14.265 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-20 16:46:14.265 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 729 ms
+2025-04-20 16:46:14.400 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-20 16:46:14.402 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:46:14.409 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-20 16:46:14.409 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:46:14.410 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-20 16:46:14.410 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:46:14.662 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-20 16:46:14.680 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+2025-04-20 16:46:14.685 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-20 16:46:14.689 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-04-20 16:46:14.695 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.community.waste.WasteClassificationApplication.main(WasteClassificationApplication.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 22 common frames omitted
+2025-04-20 16:50:07.073 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 18952 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-20 16:50:07.073 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-20 16:50:07.074 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-20 16:50:07.565 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-20 16:50:07.571 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-20 16:50:07.571 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-20 16:50:07.747 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-20 16:50:07.834 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-20 16:50:07.835 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 742 ms
+2025-04-20 16:50:07.977 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-20 16:50:07.979 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:50:07.987 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-20 16:50:07.987 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:50:07.987 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-20 16:50:07.987 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:50:08.240 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-20 16:50:08.259 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+2025-04-20 16:50:08.265 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-20 16:50:08.269 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-04-20 16:50:08.275 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.community.waste.WasteClassificationApplication.main(WasteClassificationApplication.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 22 common frames omitted
+2025-04-20 16:51:17.841 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 19017 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-20 16:51:17.842 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-20 16:51:17.842 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-20 16:51:18.301 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-20 16:51:18.306 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-20 16:51:18.306 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-20 16:51:18.527 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-20 16:51:18.621 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-20 16:51:18.621 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 758 ms
+2025-04-20 16:51:18.752 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-20 16:51:18.754 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:51:18.761 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-20 16:51:18.761 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:51:18.761 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-20 16:51:18.761 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:51:19.013 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-20 16:51:19.029 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+2025-04-20 16:51:19.034 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-20 16:51:19.038 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-04-20 16:51:19.044 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.community.waste.WasteClassificationApplication.main(WasteClassificationApplication.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 22 common frames omitted
+2025-04-20 16:54:44.289 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 19166 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-20 16:54:44.290 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-20 16:54:44.290 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-20 16:54:44.729 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-20 16:54:44.734 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-20 16:54:44.735 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-20 16:54:44.897 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-20 16:54:44.986 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-20 16:54:44.986 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 678 ms
+2025-04-20 16:54:45.114 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-20 16:54:45.115 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:54:45.122 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-20 16:54:45.122 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:54:45.123 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-20 16:54:45.123 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 16:54:45.352 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-20 16:54:45.369 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+2025-04-20 16:54:45.374 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-20 16:54:45.378 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-04-20 16:54:45.384 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.community.waste.WasteClassificationApplication.main(WasteClassificationApplication.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 22 common frames omitted
+2025-04-20 17:01:24.575 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 19392 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-20 17:01:24.576 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-20 17:01:24.576 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-20 17:01:25.074 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-20 17:01:25.080 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-20 17:01:25.080 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-20 17:01:25.247 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-20 17:01:25.336 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-20 17:01:25.336 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 736 ms
+2025-04-20 17:01:25.470 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-20 17:01:25.472 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:01:25.481 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-20 17:01:25.481 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:01:25.481 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-20 17:01:25.481 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:01:25.717 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-20 17:01:25.734 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+2025-04-20 17:01:25.740 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-20 17:01:25.743 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-04-20 17:01:25.750 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.community.waste.WasteClassificationApplication.main(WasteClassificationApplication.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getCategoryStats(HttpSession)
+to {GET [/api/record/stats/category]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getCategoryStats(HttpSession) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 22 common frames omitted
+2025-04-20 17:02:05.429 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 19529 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-20 17:02:05.431 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-20 17:02:05.431 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-20 17:02:05.878 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-20 17:02:05.883 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-20 17:02:05.883 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-20 17:02:06.043 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-20 17:02:06.134 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-20 17:02:06.134 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 682 ms
+2025-04-20 17:02:06.268 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-20 17:02:06.270 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:02:06.277 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-20 17:02:06.277 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:02:06.277 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-20 17:02:06.277 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:02:06.521 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-20 17:02:06.539 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getDailyStats(Integer, HttpSession)
+to {GET [/api/record/stats/daily]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getDailyStats(Integer, HttpSession) mapped.
+2025-04-20 17:02:06.546 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-20 17:02:06.549 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-04-20 17:02:06.556 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getDailyStats(Integer, HttpSession)
+to {GET [/api/record/stats/daily]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getDailyStats(Integer, HttpSession) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.community.waste.WasteClassificationApplication.main(WasteClassificationApplication.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'statisticsController' method 
+com.community.waste.controller.StatisticsController#getDailyStats(Integer, HttpSession)
+to {GET [/api/record/stats/daily]}: There is already 'wasteRecordController' bean method
+com.community.waste.controller.WasteRecordController#getDailyStats(Integer, HttpSession) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 22 common frames omitted
+2025-04-20 17:04:02.278 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 19617 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-20 17:04:02.279 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-20 17:04:02.279 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-20 17:04:02.720 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-20 17:04:02.725 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-20 17:04:02.725 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-20 17:04:02.877 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-20 17:04:02.971 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-20 17:04:02.971 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 669 ms
+2025-04-20 17:04:03.106 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-20 17:04:03.107 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:04:03.114 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-20 17:04:03.114 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:04:03.114 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-20 17:04:03.114 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:04:03.347 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-20 17:04:03.405 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/waste'
+2025-04-20 17:04:03.410 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-20 17:04:03.410 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:04:03.411 [main] INFO  com.community.waste.WasteClassificationApplication - Started WasteClassificationApplication in 1.317 seconds (JVM running for 1.482)
+2025-04-20 17:04:03.426 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-20 17:04:03.426 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-20 17:04:03.426 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:07:57.971 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 19810 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-20 17:07:57.972 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-20 17:07:57.972 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-20 17:07:58.403 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-20 17:07:58.408 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-20 17:07:58.408 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-20 17:07:58.545 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-20 17:07:58.634 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-20 17:07:58.634 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 641 ms
+2025-04-20 17:07:58.772 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-20 17:07:58.774 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:07:58.782 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-20 17:07:58.782 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:07:58.782 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-20 17:07:58.782 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:07:59.018 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-20 17:07:59.080 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/waste'
+2025-04-20 17:07:59.084 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-20 17:07:59.084 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:07:59.085 [main] INFO  com.community.waste.WasteClassificationApplication - Started WasteClassificationApplication in 1.283 seconds (JVM running for 1.452)
+2025-04-20 17:07:59.100 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-20 17:07:59.100 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-20 17:07:59.100 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:08:27.324 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-20 17:08:27.324 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-20 17:08:27.325 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-20 17:08:31.180 [http-nio-8080-exec-5] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 17:08:40.351 [http-nio-8080-exec-5] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 22:48:27.055 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-20 22:48:27.055 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-20 22:48:27.075 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]

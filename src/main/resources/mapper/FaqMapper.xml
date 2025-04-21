@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.community.waste.mapper.FaqMapper">
+    
+    <!-- 常见问题表字段 -->
+    <sql id="Base_Column_List">
+        id, question, answer, create_time, update_time
+    </sql>
+    
+    <!-- 查询所有常见问题 -->
+    <select id="selectAll" resultType="com.community.waste.entity.Faq">
+        SELECT <include refid="Base_Column_List" />
+        FROM faq
+        ORDER BY id ASC
+    </select>
+    
+    <!-- 根据ID查询常见问题 -->
+    <select id="selectById" parameterType="java.lang.Integer" resultType="com.community.waste.entity.Faq">
+        SELECT <include refid="Base_Column_List" />
+        FROM faq
+        WHERE id = #{id}
+    </select>
+    
+    <!-- 新增常见问题 -->
+    <insert id="insert" parameterType="com.community.waste.entity.Faq" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO faq (
+            question, answer, create_time, update_time
+        ) VALUES (
+            #{question}, #{answer}, #{createTime}, #{updateTime}
+        )
+    </insert>
+    
+    <!-- 更新常见问题 -->
+    <update id="update" parameterType="com.community.waste.entity.Faq">
+        UPDATE faq
+        <set>
+            <if test="question != null">question = #{question},</if>
+            <if test="answer != null">answer = #{answer},</if>
+            update_time = #{updateTime}
+        </set>
+        WHERE id = #{id}
+    </update>
+    
+    <!-- 删除常见问题 -->
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        DELETE FROM faq
+        WHERE id = #{id}
+    </delete>
+</mapper> 

@@ -1,0 +1,27 @@
+2025-04-18 18:26:41.750 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/UserMapper.class]
+2025-04-18 18:26:41.750 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/ActivityMapper.class]
+2025-04-18 18:26:41.751 DEBUG - Creating MapperFactoryBean with name 'userMapper' and 'com.community.waste.mapper.UserMapper' mapperInterface
+2025-04-18 18:26:41.752 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2025-04-18 18:26:41.752 DEBUG - Creating MapperFactoryBean with name 'activityMapper' and 'com.community.waste.mapper.ActivityMapper' mapperInterface
+2025-04-18 18:26:41.752 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'activityMapper'.
+2025-04-18 18:41:46.577 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/UserMapper.class]
+2025-04-18 18:41:46.577 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/ActivityMapper.class]
+2025-04-18 18:41:46.577 DEBUG - Creating MapperFactoryBean with name 'userMapper' and 'com.community.waste.mapper.UserMapper' mapperInterface
+2025-04-18 18:41:46.578 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2025-04-18 18:41:46.578 DEBUG - Creating MapperFactoryBean with name 'activityMapper' and 'com.community.waste.mapper.ActivityMapper' mapperInterface
+2025-04-18 18:41:46.578 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'activityMapper'.
+2025-04-18 18:42:32.082 INFO  - 执行SQL: SELECT id, username, password, phone, email, role, register_time, last_login_time FROM user WHERE username = 'admin'
+2025-04-18 18:42:32.082 INFO  - SQL ID: com.community.waste.mapper.UserMapper.selectByUsername
+2025-04-18 18:42:32.082 INFO  - 执行耗时: 39 毫秒
+2025-04-18 18:42:32.091 INFO  - 执行SQL: UPDATE user SET last_login_time = NOW() WHERE id = 1
+2025-04-18 18:42:32.091 INFO  - SQL ID: com.community.waste.mapper.UserMapper.updateLastLoginTime
+2025-04-18 18:42:32.091 INFO  - 执行耗时: 8 毫秒
+2025-04-18 18:42:42.566 INFO  - 执行SQL: SELECT a. id, title, content, location, start_time, end_time, registration_method, publisher_id, publish_time, update_time , u.id AS publisher_id, u.username AS publisher_username FROM activity a LEFT JOIN user u ON a.publisher_id = u.id WHERE a.end_time >= NOW() ORDER BY a.start_time ASC
+2025-04-18 18:42:42.566 INFO  - SQL ID: com.community.waste.mapper.ActivityMapper.selectByTimeOrder
+2025-04-18 18:42:42.566 INFO  - 执行耗时: 16 毫秒
+2025-04-18 18:42:43.537 INFO  - 执行SQL: SELECT a. id, title, content, location, start_time, end_time, registration_method, publisher_id, publish_time, update_time , u.id AS publisher_id, u.username AS publisher_username FROM activity a LEFT JOIN user u ON a.publisher_id = u.id WHERE a.end_time < NOW() ORDER BY a.start_time ASC
+2025-04-18 18:42:43.537 INFO  - SQL ID: com.community.waste.mapper.ActivityMapper.selectByTimeOrder
+2025-04-18 18:42:43.537 INFO  - 执行耗时: 8 毫秒
+2025-04-18 18:42:45.248 INFO  - 执行SQL: SELECT a. id, title, content, location, start_time, end_time, registration_method, publisher_id, publish_time, update_time , u.id AS publisher_id, u.username AS publisher_username FROM activity a LEFT JOIN user u ON a.publisher_id = u.id WHERE a.end_time >= NOW() ORDER BY a.start_time ASC
+2025-04-18 18:42:45.248 INFO  - SQL ID: com.community.waste.mapper.ActivityMapper.selectByTimeOrder
+2025-04-18 18:42:45.248 INFO  - 执行耗时: 3 毫秒

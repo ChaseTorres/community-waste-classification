@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.community.waste.mapper.WasteRecordMapper">
+    
+    <resultMap id="WasteRecordMap" type="com.community.waste.entity.WasteRecord">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="categoryId" column="category_id"/>
+        <result property="weight" column="weight"/>
+        <result property="description" column="description"/>
+        <result property="location" column="location"/>
+        <result property="image" column="image"/>
+        <result property="createTime" column="create_time"/>
+        <association property="user" javaType="com.community.waste.entity.User">
+            <id property="id" column="u_id"/>
+            <result property="username" column="u_username"/>
+            <result property="role" column="u_role"/>
+        </association>
+        <association property="category" javaType="com.community.waste.entity.WasteCategory">
+            <id property="id" column="c_id"/>
+            <result property="name" column="c_name"/>
+        </association>
+    </resultMap>
+    
+    <sql id="Base_Column_List">
+        id, user_id, category_id, weight, description, location, image, create_time
+    </sql>
+    
+    <sql id="Join_Column_List">
+        r.id, r.user_id, r.category_id, r.weight, r.description, r.location, r.image, r.create_time,
+        u.id as u_id, u.username as u_username, u.role as u_role,
+        c.id as c_id, c.name as c_name
+    </sql>
+    
+    <select id="selectAll" resultMap="WasteRecordMap">
+        SELECT 
+        <include refid="Join_Column_List"/>
+        FROM waste_record r
+        LEFT JOIN user u ON r.user_id = u.id
+        LEFT JOIN waste_category c ON r.category_id = c.id
+        ORDER BY r.create_time DESC
+    </select>
+    
+    <select id="selectByUserId" resultMap="WasteRecordMap">
+        SELECT 
+        <include refid="Join_Column_List"/>
+        FROM waste_record r
+        LEFT JOIN user u ON r.user_id = u.id
+        LEFT JOIN waste_category c ON r.category_id = c.id
+        WHERE r.user_id = #{userId}
+        ORDER BY r.create_time DESC
+    </select>
+    
+    <select id="selectByCategoryId" resultMap="WasteRecordMap">
+        SELECT 
+        <include refid="Join_Column_List"/>
+        FROM waste_record r
+        LEFT JOIN user u ON r.user_id = u.id
+        LEFT JOIN waste_category c ON r.category_id = c.id
+        WHERE r.category_id = #{categoryId}
+        ORDER BY r.create_time DESC
+    </select>
+    
+    <select id="selectById" resultMap="WasteRecordMap">
+        SELECT 
+        <include refid="Join_Column_List"/>
+        FROM waste_record r
+        LEFT JOIN user u ON r.user_id = u.id
+        LEFT JOIN waste_category c ON r.category_id = c.id
+        WHERE r.id = #{id}
+    </select>
+    
+    <select id="selectByCondition" resultMap="WasteRecordMap" parameterType="java.util.Map">
+        SELECT 
+        <include refid="Join_Column_List"/>
+        FROM waste_record r
+        LEFT JOIN user u ON r.user_id = u.id
+        LEFT JOIN waste_category c ON r.category_id = c.id
+        <where>
+            <if test="userId != null">
+                AND r.user_id = #{userId}
+            </if>
+            <if test="categoryId != null">
+                AND r.category_id = #{categoryId}
+            </if>
+            <if test="startTime != null">
+                AND r.create_time &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                AND r.create_time &lt;= #{endTime}
+            </if>
+            <if test="location != null and location != ''">
+                AND r.location LIKE CONCAT('%', #{location}, '%')
+            </if>
+        </where>
+        ORDER BY r.create_time DESC
+    </select>
+    
+    <insert id="insert" parameterType="com.community.waste.entity.WasteRecord" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO waste_record (
+            user_id, category_id, weight, description, location, image, create_time
+        ) VALUES (
+            #{userId}, #{categoryId}, #{weight}, #{description}, #{location}, #{image}, #{createTime}
+        )
+    </insert>
+    
+    <update id="update" parameterType="com.community.waste.entity.WasteRecord">
+        UPDATE waste_record
+        <set>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="categoryId != null">category_id = #{categoryId},</if>
+            <if test="weight != null">weight = #{weight},</if>
+            <if test="description != null">description = #{description},</if>
+            <if test="location != null">location = #{location},</if>
+            <if test="image != null">image = #{image},</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+    
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        DELETE FROM waste_record
+        WHERE id = #{id}
+    </delete>
+    
+    <select id="sumWeightByUserId" resultType="java.lang.Double">
+        SELECT IFNULL(SUM(weight), 0) 
+        FROM waste_record
+        WHERE user_id = #{userId}
+    </select>
+    
+    <select id="countGroupByCategory" resultType="java.util.Map">
+        SELECT 
+            c.id as categoryId,
+            c.name as categoryName,
+            COUNT(r.id) as recordCount,
+            IFNULL(SUM(r.weight), 0) as totalWeight
+        FROM waste_record r
+        LEFT JOIN waste_category c ON r.category_id = c.id
+        GROUP BY c.id, c.name
+    </select>
+    
+    <select id="countGroupByDate" resultType="java.util.Map">
+        SELECT 
+            DATE_FORMAT(r.create_time, '%Y-%m-%d') as date,
+            COUNT(r.id) as recordCount,
+            IFNULL(SUM(r.weight), 0) as totalWeight
+        FROM waste_record r
+        WHERE r.create_time >= DATE_SUB(CURDATE(), INTERVAL #{days} DAY)
+        GROUP BY DATE_FORMAT(r.create_time, '%Y-%m-%d')
+        ORDER BY date
+    </select>
+</mapper> 
