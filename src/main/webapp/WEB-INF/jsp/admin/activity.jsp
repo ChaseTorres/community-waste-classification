@@ -6,163 +6,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>活动管理 - 社区垃圾分类系统</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/common.css">
     <style>
-        .card {
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            border: none;
-        }
-        .card-header {
-            border-top-left-radius: 15px !important;
-            border-top-right-radius: 15px !important;
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-        }
-        .btn-outline-success {
-            border-radius: 20px;
-            font-weight: 500;
-            padding: 8px 20px;
-            transition: all 0.3s;
-        }
-        .btn-outline-success:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .table-hover tbody tr:hover {
-            background-color: rgba(40, 167, 69, 0.05);
-        }
-        .thead-light th {
-            background-color: #f8f9fa;
-            color: #495057;
-            border-color: #e9ecef;
-        }
-        .table td, .table th {
+        .activity-table th, .activity-table td {
             vertical-align: middle;
         }
-        .badge {
+        .activity-title {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .badge-status {
             padding: 5px 10px;
             border-radius: 20px;
-            font-weight: 500;
         }
-        .modal-content {
-            border-radius: 15px;
+        .activity-card {
             border: none;
+            transition: all var(--transition-speed);
         }
-        .modal-header {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
-        .form-control {
-            border-radius: 20px;
-            padding: 10px 20px;
-            border: 1px solid #ced4da;
-        }
-        .form-control:focus {
-            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-            border-color: #28a745;
-        }
-        textarea.form-control {
-            border-radius: 15px;
-        }
-        .btn-sm {
-            border-radius: 20px;
-            padding: 4px 10px;
-        }
-        .pagination .page-link {
-            border-radius: 20px;
-            margin: 0 3px;
-            color: #28a745;
-        }
-        .pagination .page-item.active .page-link {
-            background-color: #28a745;
-            border-color: #28a745;
-        }
-        .pagination .page-link:focus {
-            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-        }
-        .btn-success {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-            border: none;
-            border-radius: 20px;
-            padding: 8px 25px;
-            font-weight: 500;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-        }
-        .btn-success:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-        }
-        .btn-secondary {
-            border-radius: 20px;
-            padding: 8px 25px;
-            font-weight: 500;
-        }
-        label {
-            font-weight: 500;
-            color: #495057;
-        }
-        #viewTitle {
-            font-weight: 600;
-            color: #343a40;
-        }
-        #viewContent {
-            background-color: #f8f9fa;
-            line-height: 1.6;
-            color: #343a40;
-        }
-        .text-muted i {
-            color: #20c997;
-        }
-        .info-icon {
-            width: 36px;
-            height: 36px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(40, 167, 69, 0.1);
-            border-radius: 50%;
-            margin-right: 10px;
-            color: #28a745;
-        }
-        .activity-info {
+        .info-box {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
         }
-        .activity-info span {
+        .info-box .icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-bg);
+            color: var(--primary-color);
+            border-radius: 50%;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        .info-box .info-content {
+            flex: 1;
+        }
+        .info-box .info-label {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+        .info-box .info-value {
+            color: var(--text-dark);
             font-weight: 500;
         }
-        .table-bordered {
-            border-radius: 10px;
+        .participant-table {
+            border-radius: var(--border-radius);
             overflow: hidden;
         }
-        .table-bordered thead th {
-            background-color: #f8f9fa;
+        .section-card {
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: none;
+            box-shadow: var(--shadow-sm);
+        }
+        .section-card .card-header {
+            background-color: var(--primary-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+            border-bottom: none;
+        }
+        .activity-content {
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
     <jsp:include page="../common/header.jsp" />
     
-    <div class="container mt-4">
-        <div class="card shadow-sm">
-            <div class="card-header bg-success text-white py-3">
-                <h5 class="mb-0"><i class="fas fa-calendar-check mr-2"></i>活动管理</h5>
+    <div class="container">
+        <div class="page-title">
+            <h2>活动管理</h2>
+        </div>
+        
+        <div class="card activity-card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-calendar-check mr-2"></i>活动列表</span>
+                <button class="btn btn-success btn-sm" id="addActivityBtn">
+                    <i class="fas fa-plus-circle mr-1"></i>创建活动
+                </button>
             </div>
-            <div class="card-body py-4 px-4">
-                <div class="mb-4">
-                    <button class="btn btn-outline-success" id="addActivityBtn">
-                        <i class="fas fa-plus-circle mr-1"></i>创建活动
-                    </button>
-                </div>
-                
+            <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-striped table-hover">
-                        <thead class="thead-light">
+                    <table class="table table-striped table-hover activity-table">
+                        <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>标题</th>
@@ -193,13 +132,13 @@
     <div class="modal fade" id="activityModal" tabindex="-1" role="dialog" aria-labelledby="activityModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-success text-white">
+                <div class="modal-header">
                     <h5 class="modal-title" id="activityModalLabel">创建活动</h5>
-                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body py-4">
+                <div class="modal-body">
                     <form id="activityForm">
                         <input type="hidden" id="activityId">
                         <div class="form-group">
@@ -251,65 +190,82 @@
     <div class="modal fade" id="viewActivityModal" tabindex="-1" role="dialog" aria-labelledby="viewActivityModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-success text-white">
+                <div class="modal-header">
                     <h5 class="modal-title" id="viewActivityModalLabel">查看活动</h5>
-                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body py-4">
-                    <h4 id="viewTitle" class="text-center mb-4"></h4>
+                <div class="modal-body">
+                    <h4 id="viewTitle" class="text-center mb-4 activity-title"></h4>
                     
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="activity-info">
-                                        <span class="info-icon"><i class="fas fa-clock"></i></span>
-                                        <span id="viewTime"></span>
-                                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <div class="icon">
+                                    <i class="fas fa-clock"></i>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="activity-info">
-                                        <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span id="viewLocation"></span>
-                                    </div>
+                                <div class="info-content">
+                                    <div class="info-label">活动时间</div>
+                                    <div class="info-value" id="viewTime"></div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="activity-info">
-                                        <span class="info-icon"><i class="fas fa-users"></i></span>
-                                        参与人数: <span id="viewParticipants"></span>
-                                    </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="activity-info">
-                                        <span class="info-icon"><i class="fas fa-star"></i></span>
-                                        奖励积分: <span id="viewPoints"></span>
-                                    </div>
+                                <div class="info-content">
+                                    <div class="info-label">活动地点</div>
+                                    <div class="info-value" id="viewLocation"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="card mb-4">
-                        <div class="card-header bg-light">
-                            <h5 class="mb-0">活动详情</h5>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <div class="icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="info-content">
+                                    <div class="info-label">参与人数</div>
+                                    <div class="info-value" id="viewParticipants"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <div id="viewContent" class="p-3"></div>
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <div class="icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="info-content">
+                                    <div class="info-label">奖励积分</div>
+                                    <div class="info-value" id="viewPoints"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="card" id="participantsContainer">
-                        <div class="card-header bg-light">
-                            <h5 class="mb-0">参与人员列表</h5>
+                    <div class="section-card">
+                        <div class="card-header">
+                            <i class="fas fa-info-circle mr-2"></i>活动详情
+                        </div>
+                        <div class="card-body">
+                            <div id="viewContent" class="activity-content"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-card">
+                        <div class="card-header">
+                            <i class="fas fa-users mr-2"></i>参与人员
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-sm table-bordered">
-                                    <thead class="thead-light">
+                                <table class="table table-sm table-striped participant-table">
+                                    <thead>
                                         <tr>
                                             <th>用户名</th>
                                             <th>姓名</th>
@@ -334,9 +290,9 @@
     
     <jsp:include page="../common/footer.jsp" />
     
-    <script src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/bootstrap.bundle.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/fontawesome.all.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     
     <script>
         $(document).ready(function() {
@@ -384,7 +340,7 @@
                 $.each(activities, function(index, activity) {
                     html += '<tr>';
                     html += '<td>' + activity.id + '</td>';
-                    html += '<td class="font-weight-bold">' + activity.title + '</td>';
+                    html += '<td class="activity-title">' + activity.title + '</td>';
                     html += '<td>' + activity.activityTime + '</td>';
                     html += '<td>' + activity.location + '</td>';
                     html += '<td>' + activity.currentParticipants + '/' + activity.maxParticipants + '</td>';
@@ -392,15 +348,15 @@
                     // 活动状态显示
                     var statusHtml = '';
                     if(activity.status === 0) {
-                        statusHtml = '<span class="badge badge-secondary">草稿</span>';
+                        statusHtml = '<span class="badge badge-secondary badge-status">草稿</span>';
                     } else {
                         var now = new Date();
                         var actTime = new Date(activity.activityTime);
                         
                         if(now < actTime) {
-                            statusHtml = '<span class="badge badge-success">进行中</span>';
+                            statusHtml = '<span class="badge badge-success badge-status">进行中</span>';
                         } else {
-                            statusHtml = '<span class="badge badge-info">已结束</span>';
+                            statusHtml = '<span class="badge badge-info badge-status">已结束</span>';
                         }
                     }
                     html += '<td>' + statusHtml + '</td>';
@@ -530,7 +486,7 @@
                             html += '<td>' + (p.realName || '-') + '</td>';
                             html += '<td>' + (p.phone || '-') + '</td>';
                             html += '<td>' + p.joinTime + '</td>';
-                            html += '<td>' + (p.status === 1 ? '<span class="badge badge-success">已参与</span>' : '<span class="badge badge-warning">已报名</span>') + '</td>';
+                            html += '<td>' + (p.status === 1 ? '<span class="badge badge-success badge-status">已参与</span>' : '<span class="badge badge-warning badge-status">已报名</span>') + '</td>';
                             html += '</tr>';
                         });
                     }

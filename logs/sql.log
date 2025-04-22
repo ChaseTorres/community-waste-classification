@@ -256,3 +256,33 @@
 2025-04-22 13:36:56.754 INFO  - 执行SQL: UPDATE user SET last_login_time = NOW() WHERE id = 1
 2025-04-22 13:36:56.754 INFO  - SQL ID: com.community.waste.mapper.UserMapper.updateLastLoginTime
 2025-04-22 13:36:56.754 INFO  - 执行耗时: 7 毫秒
+2025-04-22 13:43:22.461 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/AnnouncementMapper.class]
+2025-04-22 13:43:22.461 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/WasteRecordMapper.class]
+2025-04-22 13:43:22.461 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/UserMapper.class]
+2025-04-22 13:43:22.461 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/FaqMapper.class]
+2025-04-22 13:43:22.461 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/WasteCategoryMapper.class]
+2025-04-22 13:43:22.461 DEBUG - Identified candidate component class: URL [jar:file:/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/community/waste/mapper/ActivityMapper.class]
+2025-04-22 13:43:22.461 DEBUG - Creating MapperFactoryBean with name 'announcementMapper' and 'com.community.waste.mapper.AnnouncementMapper' mapperInterface
+2025-04-22 13:43:22.462 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'announcementMapper'.
+2025-04-22 13:43:22.462 DEBUG - Creating MapperFactoryBean with name 'wasteRecordMapper' and 'com.community.waste.mapper.WasteRecordMapper' mapperInterface
+2025-04-22 13:43:22.462 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'wasteRecordMapper'.
+2025-04-22 13:43:22.462 DEBUG - Creating MapperFactoryBean with name 'userMapper' and 'com.community.waste.mapper.UserMapper' mapperInterface
+2025-04-22 13:43:22.462 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2025-04-22 13:43:22.462 DEBUG - Creating MapperFactoryBean with name 'faqMapper' and 'com.community.waste.mapper.FaqMapper' mapperInterface
+2025-04-22 13:43:22.462 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'faqMapper'.
+2025-04-22 13:43:22.462 DEBUG - Creating MapperFactoryBean with name 'wasteCategoryMapper' and 'com.community.waste.mapper.WasteCategoryMapper' mapperInterface
+2025-04-22 13:43:22.462 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'wasteCategoryMapper'.
+2025-04-22 13:43:22.462 DEBUG - Creating MapperFactoryBean with name 'activityMapper' and 'com.community.waste.mapper.ActivityMapper' mapperInterface
+2025-04-22 13:43:22.462 DEBUG - Enabling autowire by type for MapperFactoryBean with name 'activityMapper'.
+2025-04-22 13:43:58.634 INFO  - 执行SQL: SELECT id, name, description, examples, image1, image2, image3, create_time, update_time FROM waste_category ORDER BY id ASC
+2025-04-22 13:43:58.634 INFO  - SQL ID: com.community.waste.mapper.WasteCategoryMapper.selectAll
+2025-04-22 13:43:58.634 INFO  - 执行耗时: 30 毫秒
+2025-04-22 13:44:05.359 INFO  - 执行SQL: SELECT id, name, description, examples, image1, image2, image3, create_time, update_time FROM waste_category ORDER BY id ASC
+2025-04-22 13:44:05.360 INFO  - SQL ID: com.community.waste.mapper.WasteCategoryMapper.selectAll
+2025-04-22 13:44:05.360 INFO  - 执行耗时: 7 毫秒
+2025-04-22 13:44:21.006 INFO  - 执行SQL: SELECT id, username, password, phone, email, role, register_time, last_login_time FROM user WHERE username = 'admin'
+2025-04-22 13:44:21.006 INFO  - SQL ID: com.community.waste.mapper.UserMapper.selectByUsername
+2025-04-22 13:44:21.006 INFO  - 执行耗时: 6 毫秒
+2025-04-22 13:44:21.011 INFO  - 执行SQL: UPDATE user SET last_login_time = NOW() WHERE id = 1
+2025-04-22 13:44:21.011 INFO  - SQL ID: com.community.waste.mapper.UserMapper.updateLastLoginTime
+2025-04-22 13:44:21.011 INFO  - 执行耗时: 4 毫秒

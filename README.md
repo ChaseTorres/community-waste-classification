@@ -7,19 +7,27 @@
 - 前端：JSP、Bootstrap、jQuery、CSS
 - 后端：Spring Boot、MyBatis
 - 数据库：MySQL
+- 日志管理：Logback
+- 连接池：HikariCP
 
 ## 功能模块
 1. **用户注册与登录**：支持用户注册和账号/手机号登录
 2. **垃圾分类指南**：提供垃圾分类知识和查询功能
 3. **垃圾投放记录**：记录居民的垃圾投放情况
-4. **社区公告**：发布社区垃圾分类相关的通知和活动
-5. **数据统计**：统计垃圾分类参与情况和效果
-6. **管理员功能**：用户管理、公告和活动管理等
+4. **垃圾处理记录**：跟踪垃圾处理的全过程
+5. **社区公告**：发布社区垃圾分类相关的通知和活动
+6. **活动管理**：组织和发布社区垃圾分类活动
+7. **问答中心**：常见问题解答和知识库
+8. **数据统计与可视化**：统计垃圾分类参与情况和效果，提供图表展示
+9. **报表导出**：支持将统计数据导出为Excel格式
+10. **文件上传**：支持图片和文档上传功能
+11. **管理员功能**：用户管理、公告和活动管理等
 
 ## 环境要求
 - JDK 1.8+
 - Maven 3.6+
 - MySQL 5.7+
+- 至少2G内存的服务器环境
 
 ## 安装步骤
 1. 克隆或下载项目代码
@@ -29,6 +37,11 @@
    source /path/to/data.sql
    ```
 3. 修改`application.properties`中的数据库连接配置
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/waste_classification?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+   spring.datasource.username=root
+   spring.datasource.password=P@ssw0rd
+   ```
 4. 在项目根目录执行Maven命令打包
    ```bash
    mvn clean package
@@ -37,12 +50,31 @@
    ```bash
    java -jar target/waste-classification-0.0.1-SNAPSHOT.jar
    ```
+   或使用提供的启动脚本
+   ```bash
+   ./start.sh
+   ```
 6. 访问系统：http://localhost:8080/waste
 
 ## 默认账号
 - 超级管理员：admin / 123456
 - 管理员：manager / 123456
 - 普通用户：user1 / 123456，user2 / 123456
+
+## 系统配置
+系统的主要配置位于`application.properties`文件中，包括：
+- 服务器端口和上下文路径配置
+- 数据库连接参数
+- 连接池优化参数
+- 日志级别和格式配置
+- 文件上传大小限制（最大10MB）
+- 静态资源路径配置
+
+## 停止服务
+使用提供的停止脚本即可安全关闭服务：
+```bash
+./stop.sh
+```
 
 ## 开发者
 - 社区垃圾分类管理团队 

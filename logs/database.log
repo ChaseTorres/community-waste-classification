@@ -1590,3 +1590,105 @@
 2025-04-22 13:38:21.912 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4639dc34: (connection evicted)
 2025-04-22 13:38:21.912 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
 2025-04-22 13:38:21.912 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-22 13:43:22.920 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader org.springframework.boot.loader.LaunchedURLClassLoader@443b7951
+2025-04-22 13:43:22.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{password=<masked>}
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:mysql://localhost:3306/waste_classification?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................10
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2025-04-22 13:43:22.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................5
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"root"
+2025-04-22 13:43:22.943 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2025-04-22 13:43:22.943 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-22 13:43:23.022 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@669513d8
+2025-04-22 13:43:23.022 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-22 13:43:23.024 [main] INFO  com.community.waste.util.DbLogUtil - 数据库连接成功！
+2025-04-22 13:43:23.024 [main] INFO  com.community.waste.util.DbLogUtil - 数据库产品名称: MySQL
+2025-04-22 13:43:23.024 [main] INFO  com.community.waste.util.DbLogUtil - 数据库产品版本: 8.0.42
+2025-04-22 13:43:23.024 [main] INFO  com.community.waste.util.DbLogUtil - 数据库驱动名称: MySQL Connector/J
+2025-04-22 13:43:23.024 [main] INFO  com.community.waste.util.DbLogUtil - 数据库驱动版本: mysql-connector-j-8.0.33 (Revision: 7d6b0800528b6b25c68b52dc10d6c1c8429c100c)
+2025-04-22 13:43:23.025 [main] INFO  com.community.waste.util.DbLogUtil - 数据库URL: jdbc:mysql://localhost:3306/waste_classification?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+2025-04-22 13:43:23.030 [main] INFO  com.community.waste.util.DbLogUtil - 数据库用户名: root@localhost
+2025-04-22 13:43:23.030 [main] INFO  com.community.waste.util.DbLogUtil - JDBC主版本: 4
+2025-04-22 13:43:23.030 [main] INFO  com.community.waste.util.DbLogUtil - JDBC次版本: 2
+2025-04-22 13:43:23.030 [main] INFO  com.community.waste.util.DbLogUtil - 数据库连接是否自动提交: true
+2025-04-22 13:43:23.030 [main] INFO  com.community.waste.util.DbLogUtil - 数据库连接事务隔离级别: TRANSACTION_REPEATABLE_READ
+2025-04-22 13:43:23.034 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2372a3a3
+2025-04-22 13:43:23.038 [main] INFO  com.community.waste.util.DbLogUtil - MySQL服务器版本: 8.0.42
+2025-04-22 13:43:23.039 [main] INFO  com.community.waste.util.DbLogUtil - 当前数据库: waste_classification
+2025-04-22 13:43:23.042 [main] INFO  com.community.waste.util.DbLogUtil - 数据库表信息：
+2025-04-22 13:43:23.042 [main] INFO  com.community.waste.util.DbLogUtil - 表名: announcement, 行数: 2, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: disposal_record, 行数: 0, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: faq, 行数: 11, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: user, 行数: 4, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: waste_category, 行数: 8, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: activity, 行数: 2, 创建时间: 2025-04-17 20:31:54.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: waste_record, 行数: 0, 创建时间: 2025-04-20 16:33:07.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.127 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before cleanup stats (total=2, active=0, idle=2, waiting=0)
+2025-04-22 13:43:23.128 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After cleanup  stats (total=2, active=0, idle=2, waiting=0)
+2025-04-22 13:43:23.130 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@624fa998
+2025-04-22 13:43:23.132 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53e76b6b
+2025-04-22 13:43:23.134 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26056d7
+2025-04-22 13:43:23.134 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:43:23.358 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - 当前活动连接数: 5
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - 数据库性能指标：
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Queries: 1626
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Slow_queries: 0
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Threads_connected: 5
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Threads_running: 2
+2025-04-22 13:43:53.133 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:43:53.134 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:43:53.134 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-04-22 13:44:21.012 [http-nio-8080-exec-2] INFO  com.community.waste.util.DbLogUtil - 当前活动连接数: 5
+2025-04-22 13:44:23.136 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:44:23.136 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:44:23.136 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-04-22 13:44:53.141 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:44:53.143 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:44:53.143 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-04-22 13:45:23.146 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:45:23.146 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:45:23.146 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-04-22 13:45:53.148 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:45:53.149 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:45:53.149 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-04-22 13:46:23.154 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:46:23.155 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:46:23.155 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-04-22 13:46:27.870 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-22 13:46:27.871 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=5, active=0, idle=5, waiting=0)
+2025-04-22 13:46:27.871 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@669513d8: (connection evicted)
+2025-04-22 13:46:27.874 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2372a3a3: (connection evicted)
+2025-04-22 13:46:27.874 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@624fa998: (connection evicted)
+2025-04-22 13:46:27.875 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@53e76b6b: (connection evicted)
+2025-04-22 13:46:27.875 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@26056d7: (connection evicted)
+2025-04-22 13:46:27.875 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-04-22 13:46:27.875 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

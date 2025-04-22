@@ -6,137 +6,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>公告管理 - 社区垃圾分类系统</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/common.css">
     <style>
-        .card {
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            border: none;
-        }
-        .card-header {
-            border-top-left-radius: 15px !important;
-            border-top-right-radius: 15px !important;
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-        }
-        .btn-outline-success {
-            border-radius: 20px;
-            font-weight: 500;
-            padding: 8px 20px;
-            transition: all 0.3s;
-        }
-        .btn-outline-success:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .table-hover tbody tr:hover {
-            background-color: rgba(40, 167, 69, 0.05);
-        }
-        .thead-light th {
-            background-color: #f8f9fa;
-            color: #495057;
-            border-color: #e9ecef;
-        }
-        .table td, .table th {
+        .announcement-table th, .announcement-table td {
             vertical-align: middle;
         }
-        .badge {
+        .announcement-title {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .badge-status {
             padding: 5px 10px;
             border-radius: 20px;
-            font-weight: 500;
         }
-        .modal-content {
-            border-radius: 15px;
+        .announcement-card {
             border: none;
+            transition: all var(--transition-speed);
         }
-        .modal-header {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        .announcement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
-        .form-control {
-            border-radius: 20px;
-            padding: 10px 20px;
-            border: 1px solid #ced4da;
-        }
-        .form-control:focus {
-            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-            border-color: #28a745;
-        }
-        textarea.form-control {
-            border-radius: 15px;
-        }
-        .btn-sm {
-            border-radius: 20px;
-            padding: 4px 10px;
-        }
-        .pagination .page-link {
-            border-radius: 20px;
-            margin: 0 3px;
-            color: #28a745;
-        }
-        .pagination .page-item.active .page-link {
-            background-color: #28a745;
-            border-color: #28a745;
-        }
-        .pagination .page-link:focus {
-            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-        }
-        .btn-success {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-            border: none;
-            border-radius: 20px;
-            padding: 8px 25px;
-            font-weight: 500;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-        }
-        .btn-success:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-        }
-        .btn-secondary {
-            border-radius: 20px;
-            padding: 8px 25px;
-            font-weight: 500;
-        }
-        label {
-            font-weight: 500;
-            color: #495057;
-        }
-        #viewTitle {
-            font-weight: 600;
-            color: #343a40;
-        }
-        #viewInfo {
-            color: #6c757d;
-        }
-        #viewContent {
-            background-color: #f8f9fa;
+        .view-content {
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
             line-height: 1.6;
-            color: #343a40;
+        }
+        .view-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
     <jsp:include page="../common/header.jsp" />
     
-    <div class="container mt-4">
-        <div class="card shadow-sm">
-            <div class="card-header bg-success text-white py-3">
-                <h5 class="mb-0"><i class="fas fa-bullhorn mr-2"></i>公告管理</h5>
+    <div class="container">
+        <div class="page-title">
+            <h2>公告管理</h2>
+        </div>
+        
+        <div class="card announcement-card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-bullhorn mr-2"></i>公告列表</span>
+                <button class="btn btn-success btn-sm" id="addAnnouncementBtn">
+                    <i class="fas fa-plus-circle mr-1"></i>发布公告
+                </button>
             </div>
-            <div class="card-body py-4 px-4">
-                <div class="mb-4">
-                    <button class="btn btn-outline-success" id="addAnnouncementBtn">
-                        <i class="fas fa-plus-circle mr-1"></i>发布公告
-                    </button>
-                </div>
-                
+            <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-striped table-hover">
-                        <thead class="thead-light">
+                    <table class="table table-striped table-hover announcement-table">
+                        <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>标题</th>
@@ -165,13 +88,13 @@
     <div class="modal fade" id="announcementModal" tabindex="-1" role="dialog" aria-labelledby="announcementModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-success text-white">
+                <div class="modal-header">
                     <h5 class="modal-title" id="announcementModalLabel">发布公告</h5>
-                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body py-4">
+                <div class="modal-body">
                     <form id="announcementForm">
                         <input type="hidden" id="announcementId">
                         <div class="form-group">
@@ -203,18 +126,18 @@
     <div class="modal fade" id="viewAnnouncementModal" tabindex="-1" role="dialog" aria-labelledby="viewAnnouncementModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-success text-white">
+                <div class="modal-header">
                     <h5 class="modal-title" id="viewAnnouncementModalLabel">查看公告</h5>
-                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body py-4">
-                    <h4 id="viewTitle" class="text-center mb-3"></h4>
-                    <p class="text-muted text-center mb-4">
+                <div class="modal-body">
+                    <h4 id="viewTitle" class="text-center mb-3 announcement-title"></h4>
+                    <p class="text-center mb-4 view-meta">
                         <small id="viewInfo"></small>
                     </p>
-                    <div id="viewContent" class="p-4 border rounded bg-light"></div>
+                    <div id="viewContent" class="view-content"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
@@ -225,9 +148,9 @@
     
     <jsp:include page="../common/footer.jsp" />
     
-    <script src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/bootstrap.bundle.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/fontawesome.all.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     
     <script>
         $(document).ready(function() {
@@ -275,10 +198,10 @@
                 $.each(announcements, function(index, announcement) {
                     html += '<tr>';
                     html += '<td>' + announcement.id + '</td>';
-                    html += '<td class="font-weight-bold">' + announcement.title + '</td>';
+                    html += '<td class="announcement-title">' + announcement.title + '</td>';
                     html += '<td>' + announcement.createBy + '</td>';
                     html += '<td>' + announcement.createTime + '</td>';
-                    html += '<td>' + (announcement.status === 1 ? '<span class="badge badge-success">已发布</span>' : '<span class="badge badge-secondary">草稿</span>') + '</td>';
+                    html += '<td>' + (announcement.status === 1 ? '<span class="badge badge-success badge-status">已发布</span>' : '<span class="badge badge-secondary badge-status">草稿</span>') + '</td>';
                     html += '<td>';
                     html += '<button class="btn btn-sm btn-outline-info mr-1" onclick="viewAnnouncement(' + announcement.id + ')" title="查看"><i class="fas fa-eye"></i></button>';
                     html += '<button class="btn btn-sm btn-outline-primary mr-1" onclick="editAnnouncement(' + announcement.id + ')" title="编辑"><i class="fas fa-edit"></i></button>';

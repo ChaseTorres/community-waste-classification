@@ -7,42 +7,42 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.10)
 
-2025-04-22 13:36:36.567 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 37213 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
-2025-04-22 13:36:36.568 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
-2025-04-22 13:36:36.568 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-22 13:36:36.988 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2025-04-22 13:36:36.994 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-04-22 13:36:36.994 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
-2025-04-22 13:36:37.137 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-04-22 13:36:37.226 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
-2025-04-22 13:36:37.226 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 636 ms
-2025-04-22 13:36:37.354 [main] INFO  com.community.waste.util.DbLogUtil - 数据库连接成功！
-2025-04-22 13:36:37.354 [main] INFO  com.community.waste.util.DbLogUtil - 数据库产品名称: MySQL
-2025-04-22 13:36:37.354 [main] INFO  com.community.waste.util.DbLogUtil - 数据库产品版本: 8.0.42
-2025-04-22 13:36:37.354 [main] INFO  com.community.waste.util.DbLogUtil - 数据库驱动名称: MySQL Connector/J
-2025-04-22 13:36:37.354 [main] INFO  com.community.waste.util.DbLogUtil - 数据库驱动版本: mysql-connector-j-8.0.33 (Revision: 7d6b0800528b6b25c68b52dc10d6c1c8429c100c)
-2025-04-22 13:36:37.354 [main] INFO  com.community.waste.util.DbLogUtil - 数据库URL: jdbc:mysql://localhost:3306/waste_classification?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
-2025-04-22 13:36:37.359 [main] INFO  com.community.waste.util.DbLogUtil - 数据库用户名: root@localhost
-2025-04-22 13:36:37.359 [main] INFO  com.community.waste.util.DbLogUtil - JDBC主版本: 4
-2025-04-22 13:36:37.359 [main] INFO  com.community.waste.util.DbLogUtil - JDBC次版本: 2
-2025-04-22 13:36:37.359 [main] INFO  com.community.waste.util.DbLogUtil - 数据库连接是否自动提交: true
-2025-04-22 13:36:37.359 [main] INFO  com.community.waste.util.DbLogUtil - 数据库连接事务隔离级别: TRANSACTION_REPEATABLE_READ
-2025-04-22 13:36:37.359 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
-2025-04-22 13:36:37.361 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
-2025-04-22 13:36:37.368 [main] INFO  com.community.waste.util.DbLogUtil - MySQL服务器版本: 8.0.42
-2025-04-22 13:36:37.368 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
-2025-04-22 13:36:37.368 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
-2025-04-22 13:36:37.368 [main] INFO  com.community.waste.util.DbLogUtil - 当前数据库: waste_classification
-2025-04-22 13:36:37.369 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
-2025-04-22 13:36:37.369 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
-2025-04-22 13:36:37.372 [main] INFO  com.community.waste.util.DbLogUtil - 数据库表信息：
-2025-04-22 13:36:37.372 [main] INFO  com.community.waste.util.DbLogUtil - 表名: announcement, 行数: 2, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
-2025-04-22 13:36:37.373 [main] INFO  com.community.waste.util.DbLogUtil - 表名: disposal_record, 行数: 0, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
-2025-04-22 13:36:37.373 [main] INFO  com.community.waste.util.DbLogUtil - 表名: faq, 行数: 11, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
-2025-04-22 13:36:37.373 [main] INFO  com.community.waste.util.DbLogUtil - 表名: user, 行数: 4, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
-2025-04-22 13:36:37.373 [main] INFO  com.community.waste.util.DbLogUtil - 表名: waste_category, 行数: 8, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
-2025-04-22 13:36:37.373 [main] INFO  com.community.waste.util.DbLogUtil - 表名: activity, 行数: 2, 创建时间: 2025-04-17 20:31:54.0, 存储引擎: InnoDB
-2025-04-22 13:36:37.373 [main] INFO  com.community.waste.util.DbLogUtil - 表名: waste_record, 行数: 0, 创建时间: 2025-04-20 16:33:07.0, 存储引擎: InnoDB
+2025-04-22 13:43:22.229 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 39145 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-22 13:43:22.230 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-22 13:43:22.231 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-22 13:43:22.652 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-22 13:43:22.657 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-22 13:43:22.657 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-22 13:43:22.798 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-22 13:43:22.888 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-22 13:43:22.888 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 637 ms
+2025-04-22 13:43:23.024 [main] INFO  com.community.waste.util.DbLogUtil - 数据库连接成功！
+2025-04-22 13:43:23.024 [main] INFO  com.community.waste.util.DbLogUtil - 数据库产品名称: MySQL
+2025-04-22 13:43:23.024 [main] INFO  com.community.waste.util.DbLogUtil - 数据库产品版本: 8.0.42
+2025-04-22 13:43:23.024 [main] INFO  com.community.waste.util.DbLogUtil - 数据库驱动名称: MySQL Connector/J
+2025-04-22 13:43:23.024 [main] INFO  com.community.waste.util.DbLogUtil - 数据库驱动版本: mysql-connector-j-8.0.33 (Revision: 7d6b0800528b6b25c68b52dc10d6c1c8429c100c)
+2025-04-22 13:43:23.025 [main] INFO  com.community.waste.util.DbLogUtil - 数据库URL: jdbc:mysql://localhost:3306/waste_classification?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+2025-04-22 13:43:23.030 [main] INFO  com.community.waste.util.DbLogUtil - 数据库用户名: root@localhost
+2025-04-22 13:43:23.030 [main] INFO  com.community.waste.util.DbLogUtil - JDBC主版本: 4
+2025-04-22 13:43:23.030 [main] INFO  com.community.waste.util.DbLogUtil - JDBC次版本: 2
+2025-04-22 13:43:23.030 [main] INFO  com.community.waste.util.DbLogUtil - 数据库连接是否自动提交: true
+2025-04-22 13:43:23.030 [main] INFO  com.community.waste.util.DbLogUtil - 数据库连接事务隔离级别: TRANSACTION_REPEATABLE_READ
+2025-04-22 13:43:23.030 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-22 13:43:23.032 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-22 13:43:23.038 [main] INFO  com.community.waste.util.DbLogUtil - MySQL服务器版本: 8.0.42
+2025-04-22 13:43:23.039 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-22 13:43:23.039 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-22 13:43:23.039 [main] INFO  com.community.waste.util.DbLogUtil - 当前数据库: waste_classification
+2025-04-22 13:43:23.039 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-22 13:43:23.039 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-22 13:43:23.042 [main] INFO  com.community.waste.util.DbLogUtil - 数据库表信息：
+2025-04-22 13:43:23.042 [main] INFO  com.community.waste.util.DbLogUtil - 表名: announcement, 行数: 2, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: disposal_record, 行数: 0, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: faq, 行数: 11, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: user, 行数: 4, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: waste_category, 行数: 8, 创建时间: 2025-04-17 20:31:53.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: activity, 行数: 2, 创建时间: 2025-04-17 20:31:54.0, 存储引擎: InnoDB
+2025-04-22 13:43:23.043 [main] INFO  com.community.waste.util.DbLogUtil - 表名: waste_record, 行数: 0, 创建时间: 2025-04-20 16:33:07.0, 存储引擎: InnoDB
 Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
 Registered plugin: 'com.community.waste.config.SqlMonitorInterceptor@21694e53'
 Parsed mapper file: 'class path resource [mapper/FaqMapper.xml]'
@@ -51,57 +51,100 @@ Parsed mapper file: 'class path resource [mapper/WasteRecordMapper.xml]'
 Parsed mapper file: 'class path resource [mapper/WasteCategoryMapper.xml]'
 Parsed mapper file: 'class path resource [mapper/UserMapper.xml]'
 Parsed mapper file: 'class path resource [mapper/AnnouncementMapper.xml]'
-2025-04-22 13:36:37.603 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
-2025-04-22 13:36:37.662 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/waste'
-2025-04-22 13:36:37.666 [scheduling-1] INFO  com.community.waste.task.DatabaseMonitorTask - 开始执行数据库连接监控任务
-2025-04-22 13:36:37.666 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
-2025-04-22 13:36:37.667 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
-2025-04-22 13:36:37.668 [main] INFO  com.community.waste.WasteClassificationApplication - Started WasteClassificationApplication in 1.284 seconds (JVM running for 1.45)
-2025-04-22 13:36:37.682 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
-2025-04-22 13:36:37.682 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - 当前活动连接数: 5
-2025-04-22 13:36:37.682 [scheduling-1] INFO  com.community.waste.task.DatabaseMonitorTask - 数据库连接监控任务执行完成
-2025-04-22 13:36:37.682 [scheduling-1] INFO  com.community.waste.task.DatabaseMonitorTask - 开始执行数据库性能监控任务
-2025-04-22 13:36:37.682 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
-2025-04-22 13:36:37.682 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
-2025-04-22 13:36:37.684 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - 数据库性能指标：
-2025-04-22 13:36:37.684 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Queries: 1585
-2025-04-22 13:36:37.684 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Slow_queries: 0
-2025-04-22 13:36:37.684 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Threads_connected: 5
-2025-04-22 13:36:37.684 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Threads_running: 2
-2025-04-22 13:36:37.684 [scheduling-1] INFO  com.community.waste.task.DatabaseMonitorTask - 数据库性能监控任务执行完成
-2025-04-22 13:36:49.555 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-22 13:36:49.555 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-04-22 13:36:49.556 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-04-22 13:36:56.712 [http-nio-8080-exec-4] INFO  com.community.waste.service.impl.UserServiceImpl - 开始用户名登录流程，用户名: admin
-2025-04-22 13:36:56.713 [http-nio-8080-exec-4] DEBUG com.community.waste.service.impl.UserServiceImpl - 根据用户名查询用户: admin
+2025-04-22 13:43:23.267 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-22 13:43:23.339 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/waste'
+2025-04-22 13:43:23.343 [scheduling-1] INFO  com.community.waste.task.DatabaseMonitorTask - 开始执行数据库连接监控任务
+2025-04-22 13:43:23.343 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-22 13:43:23.343 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-22 13:43:23.344 [main] INFO  com.community.waste.WasteClassificationApplication - Started WasteClassificationApplication in 1.302 seconds (JVM running for 1.468)
+2025-04-22 13:43:23.358 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-22 13:43:23.358 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - 当前活动连接数: 5
+2025-04-22 13:43:23.358 [scheduling-1] INFO  com.community.waste.task.DatabaseMonitorTask - 数据库连接监控任务执行完成
+2025-04-22 13:43:23.358 [scheduling-1] INFO  com.community.waste.task.DatabaseMonitorTask - 开始执行数据库性能监控任务
+2025-04-22 13:43:23.358 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-22 13:43:23.358 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - 数据库性能指标：
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Queries: 1626
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Slow_queries: 0
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Threads_connected: 5
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.util.DbLogUtil - Threads_running: 2
+2025-04-22 13:43:23.360 [scheduling-1] INFO  com.community.waste.task.DatabaseMonitorTask - 数据库性能监控任务执行完成
+2025-04-22 13:43:37.019 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-22 13:43:37.019 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-22 13:43:37.020 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+用户未登录，尝试访问个人记录
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@468f7a99] was not registered for synchronization because synchronization is not active
-2025-04-22 13:36:56.725 [http-nio-8080-exec-4] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
-JDBC Connection [HikariProxyConnection@830437452 wrapping com.mysql.cj.jdbc.ConnectionImpl@669513d8] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@494c6b7e] was not registered for synchronization because synchronization is not active
+2025-04-22 13:43:58.609 [http-nio-8080-exec-2] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@530779209 wrapping com.mysql.cj.jdbc.ConnectionImpl@669513d8] will not be managed by Spring
+==>  Preparing: SELECT id, name, description, examples, image1, image2, image3, create_time, update_time FROM waste_category ORDER BY id ASC
+==> Parameters: 
+<==    Columns: id, name, description, examples, image1, image2, image3, create_time, update_time
+<==        Row: 1, 可回收物, <<BLOB>>, <<BLOB>>, /images/recyclable1.jpg, /images/recyclable2.jpg, /images/recyclable3.jpg, 2025-04-17 20:33:11, 2025-04-17 20:33:11
+<==        Row: 2, 厨余垃圾, <<BLOB>>, <<BLOB>>, /images/food1.jpg, /images/food2.jpg, /images/food3.jpg, 2025-04-17 20:33:11, 2025-04-17 20:33:11
+<==        Row: 3, 有害垃圾, <<BLOB>>, <<BLOB>>, /images/hazardous1.jpg, /images/hazardous2.jpg, /images/hazardous3.jpg, 2025-04-17 20:33:11, 2025-04-17 20:33:11
+<==        Row: 4, 其他垃圾, <<BLOB>>, <<BLOB>>, /images/other1.jpg, /images/other2.jpg, /images/other3.jpg, 2025-04-17 20:33:11, 2025-04-17 20:33:11
+<==        Row: 5, 可回收物, <<BLOB>>, <<BLOB>>, null, null, null, 2025-04-20 16:33:08, 2025-04-20 16:33:08
+<==        Row: 6, 厨余垃圾, <<BLOB>>, <<BLOB>>, null, null, null, 2025-04-20 16:33:08, 2025-04-20 16:33:08
+<==        Row: 7, 有害垃圾, <<BLOB>>, <<BLOB>>, null, null, null, 2025-04-20 16:33:08, 2025-04-20 16:33:08
+<==        Row: 8, 其他垃圾, <<BLOB>>, <<BLOB>>, null, null, null, 2025-04-20 16:33:08, 2025-04-20 16:33:08
+<==      Total: 8
+2025-04-22 13:43:58.634 [http-nio-8080-exec-2] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行SQL: SELECT id, name, description, examples, image1, image2, image3, create_time, update_time FROM waste_category ORDER BY id ASC
+2025-04-22 13:43:58.634 [http-nio-8080-exec-2] INFO  com.community.waste.config.SqlMonitorInterceptor - SQL ID: com.community.waste.mapper.WasteCategoryMapper.selectAll
+2025-04-22 13:43:58.634 [http-nio-8080-exec-2] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行耗时: 30 毫秒
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@494c6b7e]
+用户未登录，尝试访问个人记录
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f0e1456] was not registered for synchronization because synchronization is not active
+2025-04-22 13:44:05.352 [http-nio-8080-exec-3] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@103859981 wrapping com.mysql.cj.jdbc.ConnectionImpl@669513d8] will not be managed by Spring
+==>  Preparing: SELECT id, name, description, examples, image1, image2, image3, create_time, update_time FROM waste_category ORDER BY id ASC
+==> Parameters: 
+<==    Columns: id, name, description, examples, image1, image2, image3, create_time, update_time
+<==        Row: 1, 可回收物, <<BLOB>>, <<BLOB>>, /images/recyclable1.jpg, /images/recyclable2.jpg, /images/recyclable3.jpg, 2025-04-17 20:33:11, 2025-04-17 20:33:11
+<==        Row: 2, 厨余垃圾, <<BLOB>>, <<BLOB>>, /images/food1.jpg, /images/food2.jpg, /images/food3.jpg, 2025-04-17 20:33:11, 2025-04-17 20:33:11
+<==        Row: 3, 有害垃圾, <<BLOB>>, <<BLOB>>, /images/hazardous1.jpg, /images/hazardous2.jpg, /images/hazardous3.jpg, 2025-04-17 20:33:11, 2025-04-17 20:33:11
+<==        Row: 4, 其他垃圾, <<BLOB>>, <<BLOB>>, /images/other1.jpg, /images/other2.jpg, /images/other3.jpg, 2025-04-17 20:33:11, 2025-04-17 20:33:11
+<==        Row: 5, 可回收物, <<BLOB>>, <<BLOB>>, null, null, null, 2025-04-20 16:33:08, 2025-04-20 16:33:08
+<==        Row: 6, 厨余垃圾, <<BLOB>>, <<BLOB>>, null, null, null, 2025-04-20 16:33:08, 2025-04-20 16:33:08
+<==        Row: 7, 有害垃圾, <<BLOB>>, <<BLOB>>, null, null, null, 2025-04-20 16:33:08, 2025-04-20 16:33:08
+<==        Row: 8, 其他垃圾, <<BLOB>>, <<BLOB>>, null, null, null, 2025-04-20 16:33:08, 2025-04-20 16:33:08
+<==      Total: 8
+2025-04-22 13:44:05.359 [http-nio-8080-exec-3] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行SQL: SELECT id, name, description, examples, image1, image2, image3, create_time, update_time FROM waste_category ORDER BY id ASC
+2025-04-22 13:44:05.360 [http-nio-8080-exec-3] INFO  com.community.waste.config.SqlMonitorInterceptor - SQL ID: com.community.waste.mapper.WasteCategoryMapper.selectAll
+2025-04-22 13:44:05.360 [http-nio-8080-exec-3] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行耗时: 7 毫秒
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f0e1456]
+用户未登录，尝试访问个人记录
+2025-04-22 13:44:20.997 [http-nio-8080-exec-2] INFO  com.community.waste.service.impl.UserServiceImpl - 开始用户名登录流程，用户名: admin
+2025-04-22 13:44:20.998 [http-nio-8080-exec-2] DEBUG com.community.waste.service.impl.UserServiceImpl - 根据用户名查询用户: admin
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ffca19e] was not registered for synchronization because synchronization is not active
+2025-04-22 13:44:21.001 [http-nio-8080-exec-2] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@1849329743 wrapping com.mysql.cj.jdbc.ConnectionImpl@669513d8] will not be managed by Spring
 ==>  Preparing: SELECT id, username, password, phone, email, role, register_time, last_login_time FROM user WHERE username = ?
 ==> Parameters: admin(String)
 <==    Columns: id, username, password, phone, email, role, register_time, last_login_time
-<==        Row: 1, admin, e10adc3949ba59abbe56e057f20f883e, 13800000000, admin@example.com, 2, 2025-04-17 20:33:11, 2025-04-22 11:59:05
+<==        Row: 1, admin, e10adc3949ba59abbe56e057f20f883e, 13800000000, admin@example.com, 2, 2025-04-17 20:33:11, 2025-04-22 13:36:56
 <==      Total: 1
-2025-04-22 13:36:56.746 [http-nio-8080-exec-4] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行SQL: SELECT id, username, password, phone, email, role, register_time, last_login_time FROM user WHERE username = 'admin'
-2025-04-22 13:36:56.746 [http-nio-8080-exec-4] INFO  com.community.waste.config.SqlMonitorInterceptor - SQL ID: com.community.waste.mapper.UserMapper.selectByUsername
-2025-04-22 13:36:56.746 [http-nio-8080-exec-4] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行耗时: 24 毫秒
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@468f7a99]
-2025-04-22 13:36:56.746 [http-nio-8080-exec-4] DEBUG com.community.waste.service.impl.UserServiceImpl - 校验密码
-2025-04-22 13:36:56.747 [http-nio-8080-exec-4] INFO  com.community.waste.service.impl.UserServiceImpl - 更新用户最后登录时间，用户ID: 1
+2025-04-22 13:44:21.006 [http-nio-8080-exec-2] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行SQL: SELECT id, username, password, phone, email, role, register_time, last_login_time FROM user WHERE username = 'admin'
+2025-04-22 13:44:21.006 [http-nio-8080-exec-2] INFO  com.community.waste.config.SqlMonitorInterceptor - SQL ID: com.community.waste.mapper.UserMapper.selectByUsername
+2025-04-22 13:44:21.006 [http-nio-8080-exec-2] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行耗时: 6 毫秒
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ffca19e]
+2025-04-22 13:44:21.006 [http-nio-8080-exec-2] DEBUG com.community.waste.service.impl.UserServiceImpl - 校验密码
+2025-04-22 13:44:21.007 [http-nio-8080-exec-2] INFO  com.community.waste.service.impl.UserServiceImpl - 更新用户最后登录时间，用户ID: 1
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64942b8e] was not registered for synchronization because synchronization is not active
-2025-04-22 13:36:56.747 [http-nio-8080-exec-4] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
-JDBC Connection [HikariProxyConnection@894453170 wrapping com.mysql.cj.jdbc.ConnectionImpl@669513d8] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6981ebd4] was not registered for synchronization because synchronization is not active
+2025-04-22 13:44:21.008 [http-nio-8080-exec-2] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@1974350570 wrapping com.mysql.cj.jdbc.ConnectionImpl@669513d8] will not be managed by Spring
 ==>  Preparing: UPDATE user SET last_login_time = NOW() WHERE id = ?
 ==> Parameters: 1(Integer)
 <==    Updates: 1
-2025-04-22 13:36:56.754 [http-nio-8080-exec-4] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行SQL: UPDATE user SET last_login_time = NOW() WHERE id = 1
-2025-04-22 13:36:56.754 [http-nio-8080-exec-4] INFO  com.community.waste.config.SqlMonitorInterceptor - SQL ID: com.community.waste.mapper.UserMapper.updateLastLoginTime
-2025-04-22 13:36:56.754 [http-nio-8080-exec-4] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行耗时: 7 毫秒
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64942b8e]
-2025-04-22 13:36:56.754 [http-nio-8080-exec-4] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
-2025-04-22 13:36:56.754 [http-nio-8080-exec-4] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
-2025-04-22 13:36:56.755 [http-nio-8080-exec-4] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
-2025-04-22 13:36:56.755 [http-nio-8080-exec-4] INFO  com.community.waste.util.DbLogUtil - 当前活动连接数: 5
-2025-04-22 13:36:56.755 [http-nio-8080-exec-4] INFO  com.community.waste.service.impl.UserServiceImpl - 用户登录成功，用户ID: 1
+2025-04-22 13:44:21.011 [http-nio-8080-exec-2] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行SQL: UPDATE user SET last_login_time = NOW() WHERE id = 1
+2025-04-22 13:44:21.011 [http-nio-8080-exec-2] INFO  com.community.waste.config.SqlMonitorInterceptor - SQL ID: com.community.waste.mapper.UserMapper.updateLastLoginTime
+2025-04-22 13:44:21.011 [http-nio-8080-exec-2] INFO  com.community.waste.config.SqlMonitorInterceptor - 执行耗时: 4 毫秒
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6981ebd4]
+2025-04-22 13:44:21.011 [http-nio-8080-exec-2] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-22 13:44:21.011 [http-nio-8080-exec-2] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-22 13:44:21.012 [http-nio-8080-exec-2] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-22 13:44:21.012 [http-nio-8080-exec-2] INFO  com.community.waste.util.DbLogUtil - 当前活动连接数: 5
+2025-04-22 13:44:21.013 [http-nio-8080-exec-2] INFO  com.community.waste.service.impl.UserServiceImpl - 用户登录成功，用户ID: 1
