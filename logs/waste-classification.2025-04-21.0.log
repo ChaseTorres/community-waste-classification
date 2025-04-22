@@ -1,0 +1,234 @@
+2025-04-21 10:08:17.378 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 10:08:17.379 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 10:08:17.428 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 10:18:17.373 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 10:18:17.374 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 10:18:17.378 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 10:28:17.374 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 10:28:17.374 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 10:28:17.382 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 10:38:17.375 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 10:38:17.376 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 10:38:17.385 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 10:48:17.374 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 10:48:17.374 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 10:48:17.379 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 10:48:17.380 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-21 10:48:17.380 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 10:58:17.384 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 10:58:17.385 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 10:58:17.445 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 11:08:17.377 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 11:08:17.378 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 11:08:17.393 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 11:18:17.377 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 11:18:17.377 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 11:18:17.382 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 11:28:17.343 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 11:28:17.343 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 11:28:17.352 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 11:38:17.343 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 11:38:17.343 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 11:38:17.360 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 11:48:17.340 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 11:48:17.340 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 11:48:17.370 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 11:48:17.370 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-21 11:48:17.371 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 11:58:17.255 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 11:58:17.255 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 11:58:17.264 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 13:41:53.969 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 13:41:53.969 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 13:41:54.022 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 13:51:53.973 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 13:51:53.973 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 13:51:53.978 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 14:01:53.957 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 14:01:53.957 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 14:01:53.968 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 14:11:54.003 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 14:11:54.003 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 14:11:54.014 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 14:21:53.994 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 14:21:53.994 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 14:21:53.998 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 14:21:53.999 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-21 14:21:53.999 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 14:31:54.003 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 14:31:54.003 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 14:31:54.009 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 14:41:54.004 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 14:41:54.005 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 14:41:54.019 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 14:51:54.008 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 14:51:54.009 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 14:51:54.022 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 15:01:54.035 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 15:01:54.036 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 15:01:54.049 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 15:11:54.043 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 15:11:54.044 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 15:11:54.051 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 15:21:54.045 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 15:21:54.045 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 15:21:54.050 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 15:21:54.050 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-21 15:21:54.050 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 15:31:54.052 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 15:31:54.052 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 15:31:54.061 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 15:41:54.062 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 15:41:54.063 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 15:41:54.073 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 15:51:54.066 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 15:51:54.067 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 15:51:54.081 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 16:01:54.088 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 16:01:54.089 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 16:01:54.098 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 16:11:54.092 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 16:11:54.094 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 16:11:54.102 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 16:21:54.095 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 16:21:54.095 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 16:21:54.110 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 16:21:54.111 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-21 16:21:54.111 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 16:31:54.028 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 16:31:54.028 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 16:31:54.037 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 16:41:54.039 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 16:41:54.040 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 16:41:54.081 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 16:51:54.047 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 16:51:54.047 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 16:51:54.056 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 17:01:54.029 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 17:01:54.030 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 17:01:54.040 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 17:11:54.026 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 17:11:54.027 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 17:11:54.038 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 17:21:54.028 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 17:21:54.028 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 17:21:54.040 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 17:21:54.041 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-21 17:21:54.041 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 17:31:54.031 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 17:31:54.032 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 17:31:54.042 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 17:41:54.049 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 17:41:54.050 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 17:41:54.059 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 17:51:54.050 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 17:51:54.050 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 17:51:54.057 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 18:01:54.059 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 18:01:54.060 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 18:01:54.068 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 18:11:54.059 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 18:11:54.059 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 18:11:54.072 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 18:21:54.068 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 18:21:54.068 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 18:21:54.079 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 18:21:54.079 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-21 18:21:54.079 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 18:31:54.029 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 18:31:54.030 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 18:31:54.040 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 18:41:54.054 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 18:41:54.055 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 18:41:54.064 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 18:51:54.055 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 18:51:54.056 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 18:51:54.065 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 19:01:54.010 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 19:01:54.010 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 19:01:54.018 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 19:11:54.006 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 19:11:54.007 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 19:11:54.033 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 19:13:54.942 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-21 19:13:54.942 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 19:13:54.944 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-21 19:13:54.945 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 19:13:54.945 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-21 19:13:54.945 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 19:21:54.004 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 19:21:54.005 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 19:21:54.019 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 19:21:54.020 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-21 19:21:54.020 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 19:31:53.999 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 19:31:53.999 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 19:31:54.019 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 19:41:53.996 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 19:41:53.997 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 19:41:54.005 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 19:51:53.992 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 19:51:53.992 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 19:51:54.002 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 20:01:53.990 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 20:01:53.990 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:01:53.993 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 20:18:40.484 [main] INFO  com.community.waste.WasteClassificationApplication - Starting WasteClassificationApplication v0.0.1-SNAPSHOT using Java 21.0.6 on ChendeMacBook-Air.local with PID 28994 (/Users/torres/Desktop/cursor_workspace/community-waste-classification/target/waste-classification-0.0.1-SNAPSHOT.jar started by torres in /Users/torres/Desktop/cursor_workspace/community-waste-classification)
+2025-04-21 20:18:40.485 [main] DEBUG com.community.waste.WasteClassificationApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-04-21 20:18:40.486 [main] INFO  com.community.waste.WasteClassificationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-21 20:18:40.913 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-21 20:18:40.918 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-21 20:18:40.918 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-04-21 20:18:41.085 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-04-21 20:18:41.176 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring embedded WebApplicationContext
+2025-04-21 20:18:41.176 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 669 ms
+2025-04-21 20:18:41.319 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT VERSION() as version]
+2025-04-21 20:18:41.321 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:18:41.331 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT DATABASE() as current_db]
+2025-04-21 20:18:41.331 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:18:41.331 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT TABLE_NAME, TABLE_ROWS, CREATE_TIME, ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY CREATE_TIME]
+2025-04-21 20:18:41.331 [main] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:18:41.603 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-04-21 20:18:41.670 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/waste'
+2025-04-21 20:18:41.674 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 20:18:41.674 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:18:41.675 [main] INFO  com.community.waste.WasteClassificationApplication - Started WasteClassificationApplication in 1.371 seconds (JVM running for 1.542)
+2025-04-21 20:18:41.689 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 20:18:41.690 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SHOW GLOBAL STATUS WHERE Variable_name IN ('Threads_connected', 'Threads_running', 'Queries', 'Slow_queries')]
+2025-04-21 20:18:41.690 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:19:03.048 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/waste] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21 20:19:03.049 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-21 20:19:03.049 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-04-21 20:19:34.126 [http-nio-8080-exec-5] INFO  com.community.waste.service.impl.UserServiceImpl - 开始用户名登录流程，用户名: admin
+2025-04-21 20:19:34.126 [http-nio-8080-exec-5] DEBUG com.community.waste.service.impl.UserServiceImpl - 根据用户名查询用户: admin
+2025-04-21 20:19:34.139 [http-nio-8080-exec-5] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:19:34.171 [http-nio-8080-exec-5] DEBUG com.community.waste.service.impl.UserServiceImpl - 校验密码
+2025-04-21 20:19:34.172 [http-nio-8080-exec-5] INFO  com.community.waste.service.impl.UserServiceImpl - 更新用户最后登录时间，用户ID: 1
+2025-04-21 20:19:34.172 [http-nio-8080-exec-5] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:19:34.181 [http-nio-8080-exec-5] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 20:19:34.181 [http-nio-8080-exec-5] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:19:34.182 [http-nio-8080-exec-5] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 20:19:34.182 [http-nio-8080-exec-5] INFO  com.community.waste.service.impl.UserServiceImpl - 用户登录成功，用户ID: 1
+2025-04-21 20:19:59.525 [http-nio-8080-exec-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:14.221 [http-nio-8080-exec-5] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:14.225 [http-nio-8080-exec-6] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:14.225 [http-nio-8080-exec-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:29.735 [http-nio-8080-exec-10] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:29.735 [http-nio-8080-exec-6] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:29.735 [http-nio-8080-exec-7] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:36.829 [http-nio-8080-exec-10] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:36.829 [http-nio-8080-exec-8] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:36.831 [http-nio-8080-exec-6] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:44.691 [http-nio-8080-exec-10] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:45.417 [http-nio-8080-exec-6] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:20:47.288 [http-nio-8080-exec-9] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:21:04.426 [http-nio-8080-exec-8] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:28:41.677 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 20:28:41.678 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:28:41.691 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 20:38:41.692 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 20:38:41.692 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:38:41.701 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]
+2025-04-21 20:48:41.689 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) as connections FROM information_schema.PROCESSLIST WHERE DB = DATABASE()]
+2025-04-21 20:48:41.689 [scheduling-1] DEBUG o.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-04-21 20:48:41.692 [scheduling-1] DEBUG org.springframework.jdbc.core.JdbcTemplate - SQLWarning ignored: SQL state 'HY000', error code '1287', message ['INFORMATION_SCHEMA.PROCESSLIST' is deprecated and will be removed in a future release. Please use performance_schema.processlist instead]

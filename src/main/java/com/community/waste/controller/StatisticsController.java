@@ -6,9 +6,10 @@ import com.community.waste.entity.WasteRecord;
 import com.community.waste.service.UserService;
 import com.community.waste.service.WasteRecordService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
@@ -18,7 +19,7 @@ import java.util.Map;
 /**
  * 统计数据控制器
  */
-@RestController
+@Controller
 @RequestMapping("/api/record/stats")
 public class StatisticsController {
     
@@ -32,6 +33,7 @@ public class StatisticsController {
      * 获取汇总统计数据
      */
     @GetMapping("/summary")
+    @ResponseBody
     public Result<Map<String, Object>> getSummaryStats(HttpSession session) {
         // 权限检查
         User user = (User) session.getAttribute("user");
@@ -95,6 +97,7 @@ public class StatisticsController {
      * 获取各分类投放统计
      */
     @GetMapping("/category-statistics")
+    @ResponseBody
     public Result<List<Map<String, Object>>> getCategoryStats(HttpSession session) {
         // 直接复用WasteRecordController中的方法
         User user = (User) session.getAttribute("user");
@@ -110,6 +113,7 @@ public class StatisticsController {
      * 获取每日投放统计
      */
     @GetMapping("/daily-statistics")
+    @ResponseBody
     public Result<List<Map<String, Object>>> getDailyStats(Integer days, HttpSession session) {
         // 直接复用WasteRecordController中的方法
         User user = (User) session.getAttribute("user");
@@ -123,5 +127,33 @@ public class StatisticsController {
         
         List<Map<String, Object>> stats = wasteRecordService.getDailyStatistics(days);
         return Result.success(stats);
+    }
+
+    /**
+     * 统计页面
+     */
+    @GetMapping("/statistics")
+    public String statisticsPage() {
+        System.out.println("访问统计页面");
+        return "statistics";
+    }
+
+    /**
+     * 检查用户登录状态
+     */
+    @GetMapping("/api/user/current")
+    @ResponseBody
+    public Result<User> getCurrentUser(HttpSession session) {
+        User user = (User) session.getAttribute("user");
+        
+        // 添加控制台日志，记录当前登录状态
+        if (user == null) {
+            System.out.println("用户未登录，尝试访问需要权限的资源");
+            // 确保返回标准JSON格式的未登录错误，而不是纯文本
+            return Result.error(401, "未登录");
+        }
+        
+        System.out.println("当前登录用户: " + user.getUsername());
+        return Result.success(user);
     }
 } 

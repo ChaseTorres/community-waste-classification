@@ -73,6 +73,10 @@
         .summary-label {
             color: #6c757d;
         }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -136,8 +140,36 @@
         </div>
         
         <!-- 未登录提示 -->
-        <div id="loginAlert" class="alert alert-warning text-center" style="display: none;">
-            <i class="fa fa-exclamation-circle"></i> 请先<a href="${pageContext.request.contextPath}/login">登录</a>后查看详细统计数据
+        <div id="loginAlert" class="alert text-center" style="display: none; background-color: #f8f9fa; border: 2px solid #28a745; border-radius: 15px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); animation: fadeIn 0.5s ease-in-out; margin: 30px auto; max-width: 800px;">
+            <div class="mb-3">
+                <i class="fa fa-lock fa-3x text-success"></i>
+            </div>
+            <h4 class="mb-3" style="color: #28a745; font-weight: bold;">需要登录</h4>
+            <p class="mb-4" style="color: #495057; font-size: 18px;">请先登录后查看详细的垃圾分类统计数据</p>
+            <a href="${pageContext.request.contextPath}/login" class="btn btn-success btn-lg" style="border-radius: 30px; padding: 10px 30px; transition: all 0.3s ease;">
+                <i class="fa fa-sign-in-alt mr-2"></i> 立即登录
+            </a>
+        </div>
+
+        <!-- 未登录弹窗 -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" style="border-radius: 15px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div class="modal-body text-center p-5">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 20px; top: 15px;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="mb-4">
+                            <i class="fa fa-lock fa-4x text-success"></i>
+                        </div>
+                        <h3 class="mb-4" style="color: #28a745; font-weight: bold;">未登录</h3>
+                        <p class="mb-4" style="color: #495057; font-size: 18px;">您需要登录才能查看详细的垃圾分类统计数据</p>
+                        <a href="${pageContext.request.contextPath}/login" class="btn btn-success btn-lg btn-block" style="border-radius: 30px; padding: 12px; transition: all 0.3s ease;">
+                            <i class="fa fa-sign-in-alt mr-2"></i> 立即登录
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -146,7 +178,15 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcss.com/echarts/5.0.0/echarts.min.js"></script>
     <script>
+        // 页面初始化时添加控制台日志
+        console.log("页面初始化开始");
+        
         $(function() {
+            console.log("DOM加载完成，准备初始化");
+            
+            // 在页面加载时检查并隐藏任何可能直接渲染的"未登录"文本
+            checkAndRemoveUnauthorizedText();
+            
             // 检查登录状态
             checkLoginStatus();
             
@@ -157,19 +197,123 @@
             loadStatisticsData();
         });
         
+        // 检查并隐藏页面上任何直接渲染的"未登录"文本
+        function checkAndRemoveUnauthorizedText() {
+            console.log("检查页面上的未登录文本");
+            // 查找包含"未登录"文本的元素并隐藏它们
+            $("body").contents().filter(function() {
+                return this.nodeType === 3 && this.nodeValue.trim() === "未登录";
+            }).remove();
+            
+            // 也移除任何显示"未登录"的非交互元素
+            $("div, span, p").filter(function() {
+                return $(this).text().trim() === "未登录";
+            }).hide();
+        }
+        
         // 检查登录状态
         function checkLoginStatus() {
+            console.log("开始检查登录状态");
             $.ajax({
                 url: "${pageContext.request.contextPath}/api/user/current",
                 type: "GET",
+                dataType: "json",
                 success: function(res) {
+                    console.log("登录状态检查成功，响应:", res);
                     if (res.code !== 200) {
-                        $("#loginAlert").show();
+                        console.log("用户未登录，显示登录提示");
+                        // 如果是未登录错误，显示登录弹窗而不是提示区域
+                        $("#loginModal").modal('show');
+                        $("#loginAlert").hide(); // 隐藏非弹窗提示
                         $(".chart-card, .stats-summary").hide();
+                        
+                        // 检查响应是否包含"未登录"消息
+                        if (res.msg && res.msg === "未登录") {
+                            console.log("检测到'未登录'消息");
+                            // 确保不在页面上显示
+                            checkAndRemoveUnauthorizedText();
+                        }
+                    } else {
+                        console.log("用户已登录，显示统计数据");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log("登录状态检查失败", status, error);
+                    console.log("详细错误信息:", xhr);
+                    
+                    let errorResponse = null;
+                    
+                    // 尝试解析响应
+                    try {
+                        if (xhr.responseText) {
+                            errorResponse = JSON.parse(xhr.responseText);
+                            console.log("解析后的错误响应:", errorResponse);
+                        }
+                    } catch (e) {
+                        console.log("无法解析错误响应:", e);
+                    }
+                    
+                    // 判断是否未登录错误，用多种方式检查
+                    const isUnauthorized = 
+                        (xhr.status === 401) || 
+                        (errorResponse && errorResponse.msg === "未登录") ||
+                        (xhr.responseText && xhr.responseText.includes("未登录"));
+                    
+                    if (isUnauthorized) {
+                        console.log("检测到未登录状态，显示登录弹窗");
+                        $("#loginModal").modal('show');
+                        $("#loginAlert").hide(); // 隐藏非弹窗提示
+                        $(".chart-card, .stats-summary").hide();
+                        
+                        // 确保页面上没有显示"未登录"文本
+                        checkAndRemoveUnauthorizedText();
                     }
                 }
             });
         }
+        
+        // 为所有AJAX请求添加全局错误处理
+        $(document).ajaxError(function(event, xhr, settings, error) {
+            console.log("全局AJAX错误:", error);
+            console.log("错误状态:", xhr.status);
+            console.log("请求URL:", settings.url);
+            console.log("响应内容:", xhr.responseText);
+            
+            let errorResponse = null;
+            
+            // 尝试解析响应
+            try {
+                if (xhr.responseText) {
+                    errorResponse = JSON.parse(xhr.responseText);
+                    console.log("解析后的错误响应:", errorResponse);
+                }
+            } catch (e) {
+                console.log("无法解析错误响应:", e);
+            }
+            
+            // 用多种方式检查未登录错误
+            const isUnauthorized = 
+                (xhr.status === 401) || 
+                (errorResponse && errorResponse.msg === "未登录") ||
+                (xhr.responseText && xhr.responseText.includes("未登录"));
+            
+            if (isUnauthorized) {
+                console.log("全局捕获到未登录错误，显示登录弹窗");
+                $("#loginModal").modal('show');
+                $("#loginAlert").hide(); // 隐藏非弹窗提示
+                $(".chart-card, .stats-summary").hide();
+                
+                // 确保页面上没有显示"未登录"文本
+                checkAndRemoveUnauthorizedText();
+                
+                // 阻止默认错误消息显示
+                event.preventDefault();
+                
+                // 防止显示任何错误文本到页面上
+                setTimeout(checkAndRemoveUnauthorizedText, 100);
+                setTimeout(checkAndRemoveUnauthorizedText, 500);
+            }
+        });
         
         // 图表对象
         var categoryChart, dailyChart;

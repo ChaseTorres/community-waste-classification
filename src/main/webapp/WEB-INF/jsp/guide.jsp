@@ -202,13 +202,13 @@
                     
                     html += '      <div class="category-images">';
                     if (category.image1) {
-                        html += '        <img src="' + category.image1 + '" class="category-image" alt="示例图片1">';
+                        html += '        <img src="${pageContext.request.contextPath}/static/images/' + category.name + '-示例图片1.png" class="category-image" alt="' + category.name + '-示例图片1">';
                     }
                     if (category.image2) {
-                        html += '        <img src="' + category.image2 + '" class="category-image" alt="示例图片2">';
+                        html += '        <img src="${pageContext.request.contextPath}/static/images/' + category.name + '-示例图片2.png" class="category-image" alt="' + category.name + '-示例图片2">';
                     }
                     if (category.image3) {
-                        html += '        <img src="' + category.image3 + '" class="category-image" alt="示例图片3">';
+                        html += '        <img src="${pageContext.request.contextPath}/static/images/' + category.name + '-示例图片3.png" class="category-image" alt="' + category.name + '-示例图片3">';
                     }
                     html += '      </div>';
                     

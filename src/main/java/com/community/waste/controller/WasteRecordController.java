@@ -45,7 +45,8 @@ public class WasteRecordController {
     public Result<List<WasteRecord>> getMyRecords(HttpSession session) {
         User user = (User) session.getAttribute("user");
         if (user == null) {
-            return Result.error("未登录");
+            System.out.println("用户未登录，尝试访问个人记录");
+            return Result.error(401, "未登录");
         }
         
         List<WasteRecord> records = wasteRecordService.getRecordsByUserId(user.getId());
